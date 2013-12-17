@@ -1,6 +1,8 @@
 <?php
 
-register_nav_menu( 'primary', __( 'Navigation Menu', 'twentythirteen' ) );
+add_theme_support( 'post-thumbnails' );
+register_nav_menu( 'primary', 'Main Menu');
+register_nav_menu( 'footer', 'Fotter Menu');
 function firatTheme_wp_title( $title, $sep ) {
 	global $paged, $page;
 
@@ -22,3 +24,17 @@ function firatTheme_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'firatTheme_wp_title', 10, 2 );
+
+function firatTheme_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Right Widget Area', 'firatTheme' ),
+		'id'            => 'main-sidebar',
+		'description'   => __( 'Appears in the right section of the site.', 'firatTheme' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'firatTheme_widgets_init' );

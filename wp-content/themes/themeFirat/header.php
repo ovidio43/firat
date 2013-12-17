@@ -9,7 +9,7 @@
         <title><?php wp_title( '|', true, 'right' ); ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-
+        <link rel="Shortcut Icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/normalize.min.css">
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.css">
 
@@ -20,5 +20,6 @@
 
         <header>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
+            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
         </header>
         <div class="wrapper">
