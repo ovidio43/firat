@@ -15,8 +15,18 @@ body {
     line-height: 1.4;
     font-size: 16px;
     font-family: 'Century Gothic',Questrial, sans-serif;
+    background-image: url("../img/bg.jpg");
+
+    background-repeat: repeat-x;
+    background-position: right top;
+    border-top: 10px solid #A5A4A2;
     &.home {
-        background: url("../img/home-bg.png") no-repeat right 70px;
+        background: url("../img/home-bg.png") no-repeat right 140px;
+        .menu-main-menu-container{
+            ul{
+                border-bottom: 0;
+            }
+        }
     }    
 }
 
@@ -53,26 +63,97 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+#header{
+    float: left;
+    width: 100%;    
+    #logo{
+        float: left;
+        margin: 69px 0 15px 10px;    
+    }    
+}
 
 .menu-main-menu-container{
-    background: #EBF6FA;
-    border-bottom: 0px solid #FFF;
-    height: 32px;
-    padding-left: 100px;
-     a:hover, a:active, li.current_page_parent a, li.current_page_parent a:visited, li.current_page_item a, li.current_page_item a:visited {
-        color: #f1b22f;
-        text-decoration: none;
-    }
-        a:visited {
-        color: #333;
-        text-decoration: none;
-    }
+    height: 66px;
+    float: left;
+    width: 100%;
     ul{
         margin: 0;
+        background: #EBF6FA;
+        float: left;
+        width: 100%;
+        border-bottom: 2px solid #577da2;
+        height: 32px;
+        padding: 0;
         li{
             list-style: none;
-            margin-right: 25px;
+            margin-left: 25px;
             padding-top: 5px;
+            float: left;
+            &.current_page_parent{
+
+            }
+            &.current_page_parent{
+                a{
+                    color: #f1b22f;
+                }
+                ul{
+                    display: block;
+                    a{
+                        color: #295887;
+                        font-weight: bold;
+                    }
+                }
+            }
+            &.current_page_item{
+                a{
+                    color: #f1b22f;
+                }
+                ul{
+                    display: block;
+                    a{
+                        color: #295887;
+                        font-weight: bold;
+                    }
+                }
+            }
+            &.current_page_item{
+                a{
+                    color: #f1b22f;
+                }
+                ul{
+                    display: block;
+                    a{
+                        color: #295887;
+                        font-weight: bold;
+                    }
+                }
+            }
+            &.myfes{
+                a{
+                background-image: url('../img/my.png');
+                background-repeat: no-repeat;                    
+                }
+            }
+            ul{
+                display: none;
+                position: absolute;
+                left: 0;
+                background: transparent;
+                border-bottom: 2px solid #cad8e6;
+            }
+            a{
+                color: #333;
+                text-decoration: none;
+                &:hover{
+                    color: #f1b22f;
+                }
+                a:active{
+                    color: #f1b22f;
+                }
+                a:visited{
+                    color: #333;
+                }
+            }
         }         
     }
  

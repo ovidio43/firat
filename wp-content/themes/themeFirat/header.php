@@ -18,8 +18,8 @@
     <?php wp_head(); ?>
     <body <?php body_class(); ?>>
 
-        <header>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
+        <header id="header">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
             <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
         </header>
         <div class="wrapper">
