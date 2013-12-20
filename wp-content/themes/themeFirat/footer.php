@@ -1,5 +1,13 @@
     </div>
-    <footer></footer>
+    <footer id="footer">
+        <div class="wrap-footer">
+            <?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
+            <div class="copy">
+                All contents © Copyright 2012 Firat Educational Solutions. All rights reserved
+            </div>
+        </div>
+
+    </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
