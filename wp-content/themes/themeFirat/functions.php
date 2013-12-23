@@ -1,5 +1,5 @@
 <?php
-
+require_once(get_template_directory() . '/lib/post-type.php');
 add_theme_support( 'post-thumbnails' );
 register_nav_menu( 'primary', 'Main Menu');
 register_nav_menu( 'footer', 'Footer Menu');

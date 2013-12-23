@@ -12,7 +12,7 @@ textarea {
 
 body {
     font-size: 1em;
-    line-height: 1.4;
+    line-height: 1.25;
     font-size: 16px;
     font-family: 'Century Gothic',Questrial, sans-serif;
     background-image: url("../img/bg.jpg");
@@ -75,7 +75,9 @@ textarea {
         margin: 69px 0 15px 10px;    
     }    
 }
-
+.blue{
+    color: #99ccff;
+}
 .menu-main-menu-container{
     height: 66px;
     float: left;
@@ -103,10 +105,6 @@ textarea {
                 }
                 ul{
                     display: block;
-                    a{
-                        color: #295887;
-                        font-weight: bold;
-                    }
                 }
             }
             &.current_page_item{
@@ -115,10 +113,6 @@ textarea {
                 }
                 ul{
                     display: block;
-                    a{
-                        color: #295887;
-                        font-weight: bold;
-                    }
                 }
             }
             &.current_page_item{
@@ -127,10 +121,6 @@ textarea {
                 }
                 ul{
                     display: block;
-                    a{
-                        color: #295887;
-                        font-weight: bold;
-                    }
                 }
             }
             &.myfes{
@@ -142,6 +132,14 @@ textarea {
                     display: inline-block;
                     width: 64px;
                 }
+                li{
+                    display: inline;
+                    a{
+                        text-indent: 0;
+                        background: transparent;
+                        white-space: nowrap;
+                    }
+                }
             }
             ul{
                 display: none;
@@ -150,6 +148,11 @@ textarea {
                 top: 34px;
                 background: transparent;
                 border-bottom: 2px solid #cad8e6;
+                a{
+                    color: #295887!important;
+                    font-weight: bold;
+                    text-decoration: underline;
+                }                
             }
             a{
                 color: #333;
@@ -199,10 +202,14 @@ textarea {
     .wrap-content{
         margin: 0 20px;
     }
+    a{
+        color: #0d72c7;
+    }
     &.fullpage{
         width: 100%;
     }  
     .entry-title{
+        padding: 0 0 10px 0;
         .entry-thumbnail{
             padding: 10px 0;
         }
@@ -212,6 +219,52 @@ textarea {
         color: #33cccc;
         font-weight: bold;
         text-transform: uppercase;
+    }
+    blockquote{
+        background-color: #ffff00;
+        padding: 0;
+        margin: 0;
+        border-left: 0;
+        p{
+            font-size: 16px;
+        }
+    }
+    .mbox {
+        background-color: #eaf6f9;
+        padding: 10px;
+        float: left;
+        width: 700px;
+        h2{
+            color: #00b2d9;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;            
+        }
+        .col3 {
+            padding: 5px;
+            float: left;
+            width: 33%;
+        }
+        ul{
+            margin: 0;
+            padding: 0 0 0 23px;
+        }        
+    }
+    .col-left{
+        float: left;
+        width: 47%;
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .col-right{
+        float: right;
+        width: 47%;
+        img{
+            max-width: 100%;
+            height: auto;
+        }
     }
 }
 #footer{
