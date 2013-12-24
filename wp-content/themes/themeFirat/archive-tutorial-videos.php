@@ -32,7 +32,7 @@ get_header(); ?>
 					
 					$type= $_GET["type"];
 					
-					if( isset( $type ) ){
+					if( !isset( $type ) ){
 						$type="parents";	
 					}					
 					$posts = get_posts(array(
