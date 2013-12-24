@@ -34,39 +34,26 @@ get_header(); ?>
 					}
 					$posts = get_posts(array(
 					'post_type'		=> 'tutorial-videos',
-					'posts_per_page'	=> -1,
-					'meta_key'		=> 'video_embed_code',
-					'meta_value'		=> $type
-					));
-					
-					
-					//$query = new WP_Query( array( 'meta_key' => 'price', 'meta_value' => '22', 'meta_compare' => '<=', 'post_type' => 'product' ) );
+					'posts_per_page'	=> -1					
+					));					
 		?>
 		
-		
+		<div class="entry-content">			
+		<?php	if($posts){
 					
-		<?php		if($posts){ ?>
-		
-			<div class="entry-content">					
-		
-					<b><?php the_field('display_video_in');?>:</b><br><br>
-					
-					<?php  foreach($posts as $post){
-						
-								setup_postdata($post);
-						?>
+						foreach($posts as $post){ ?>
 								
 							<?php the_title(); ?><br><br>
 							<?php the_field('video_embed_code'); ?>
 							
 						<?php } ?>
 						
-			</div>						
-		<?php }	?>
+		<?php	}		?>		  		
+		</div>
+
+		<span style="color: #333399;"><em>** Students– Please click on Page 2 of myFES Tutorials on how to navigate myFES</em></span>
 		
-		
-		<span style="color: #333399;"><em>** Students– Please click on Page 2 of myFES Tutorials on how to navigate myFES</em></span>		
-		<p class="pages">Pages: </p>-->
+		<p class="pages">Pages: </p>
 		
 		</div>
  </div>
