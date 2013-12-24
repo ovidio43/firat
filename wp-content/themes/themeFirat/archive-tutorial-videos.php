@@ -27,31 +27,46 @@ get_header(); ?>
 		  <?php //endwhile; // end of the loop. ?>		
 		  
 		<?php
-					$type= $_GET['type'];
+					$types= $_GET['type'];
 					
-					if($type){
+					if(!$types){
 						$type="parents";
 					}
-					$posts = get_posts(array(
+					/*$posts = get_posts(array(
 					'post_type'		=> 'tutorial-videos',
-					'posts_per_page'	=> -1					
-					));					
+					'posts_per_page'	=> -1
+					
+					));		*//
+
+
+
+							$type = 'tutorial-videos';							
+							$args = array(
+								'post_type'     => $type,
+								'posts_per_page'    => 1,
+								'order' => 'ASC',
+								'meta_query'        => array(
+									array(
+										'key' => 'display_video_in',
+										'value' => $types 
+									)
+								)
+							);
+							$wp_query = new WP_Query($args);					
 		?>
 		
 		<div class="entry-content">			
-		<?php	if($posts){
-					
-						foreach($posts as $post){ ?>
-								
-							<?php the_title(); ?><br><br>
-							<?php the_field('video_embed_code'); ?>
-							
-						<?php } ?>
-						
-		<?php	}		?>		  		
+			<?php	if ( $myposts->have_posts() ) :
+			
+							while ( $myposts->have_posts() ) : ?>								
+							<?php   $myposts->the_post();  ?>
+								<?php the_title(); ?><br><br>
+								<?php the_field('video_embed_code'); ?>								
+							<?php endwhile; ?>								
+			<?php	endif;	?>
 		</div>
 
-		<span style="color: #333399;"><em>** Students– Please click on Page 2 of myFES Tutorials on how to navigate myFES</em></span>
+		<span style="color: #333399;"><em>** Studentsâ€“ Please click on Page 2 of myFES Tutorials on how to navigate myFES</em></span>
 		
 		<p class="pages">Pages: </p>
 		
