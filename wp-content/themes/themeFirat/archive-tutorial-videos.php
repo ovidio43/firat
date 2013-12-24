@@ -54,7 +54,7 @@ get_header(); ?>
 							);
 							$myposts = new WP_Query($args);					
 		?>
-		
+		<span><strong><?php echo $type; ?>:</strong></span>
 		<div class="entry-content">			
 			<?php	if ( $myposts->have_posts() ) :
 			
