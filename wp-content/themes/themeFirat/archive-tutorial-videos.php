@@ -30,16 +30,16 @@ get_header(); ?>
 					
 					
 					
-					$type= $_GET["type"];
 					
-					if( !isset( $type ) ){
-						$type="parents";	
-					}					
+					
+					
+					$type="parents";	
+										
 					$posts = get_posts(array(
 					'post_type'		=> 'tutorial-videos',
 					'posts_per_page'	=> -1,
 					'meta_key'		=> 'video_embed_code',
-					'meta_value'		=> $type
+					'meta_value'		=> 'parents'
 					));
 					
 					
