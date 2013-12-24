@@ -27,42 +27,47 @@ get_header(); ?>
 		  <?php //endwhile; // end of the loop. ?>		
 		  
 		<?php
-					
-					
-					
-					
-					
-					
-					$type="parents";	
-										
+					/*$type="parents";											
 					$posts = get_posts(array(
 					'post_type'		=> 'tutorial-videos',
 					'posts_per_page'	=> -1,
 					'meta_key'		=> 'video_embed_code',
 					'meta_value'		=> 'parents'
-					));
+					)); */
 					
 					
 					//$query = new WP_Query( array( 'meta_key' => 'price', 'meta_value' => '22', 'meta_compare' => '<=', 'post_type' => 'product' ) );
+					
+					$type = 'tutorial-videos';					
+					$args = array(
+						'post_type'     => $type,
+						'posts_per_page'    => 1,
+						'order' => 'ASC',
+						'meta_query'        => array(
+							array(
+								'key' => 'video_embed_code',
+								'value' => 'parents'									
+							)
+						)
+					)
+					$wp_query = new WP_Query($args);
 		?>
 		
 		
 					
-		<?php if($posts){ ?>
+		<?php    if ( $wp_query->have_posts() ) {  ?>
 		
 			<div class="entry-content">					
 		
 					<b><?php echo $type;//the_field('display_video_in');?>:</b><br><br>
 					
-					<?php  foreach($posts as $post){
-						
-								setup_postdata($post);
-						?>
+					<?php    while ( $myposts->have_posts() ) : 
+                                    $myposts->the_post();   ?>
 								
 							<?php the_title(); ?><br><br>
 							<?php the_field('video_embed_code'); ?>
 							
-						<?php } ?>
+						<?php endwhile; ?>
 						
 			</div>						
 		<?php }	?>
