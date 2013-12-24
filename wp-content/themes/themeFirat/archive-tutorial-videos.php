@@ -49,7 +49,7 @@ get_header(); ?>
 								'value' => 'parents'									
 							)
 						)
-					)
+					);
 					$wp_query = new WP_Query($args);
 		?>
 		
