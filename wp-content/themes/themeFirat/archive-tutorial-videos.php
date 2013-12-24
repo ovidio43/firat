@@ -45,11 +45,11 @@ get_header(); ?>
 		
 		
 					
-		<?php		if($posts){ ?>
+		<?php if($posts){ ?>
 		
 			<div class="entry-content">					
 		
-					<b><?php the_field('display_video_in');?>:</b><br><br>
+					<b><?php echo $type;//the_field('display_video_in');?>:</b><br><br>
 					
 					<?php  foreach($posts as $post){
 						
