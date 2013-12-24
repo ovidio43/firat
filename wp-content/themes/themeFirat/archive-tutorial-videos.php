@@ -36,7 +36,7 @@ get_header(); ?>
 					'post_type'		=> 'tutorial-videos',
 					'posts_per_page'	=> -1
 					
-					));		*//
+					));		*/
 
 
 
