@@ -52,7 +52,7 @@ get_header(); ?>
 									)
 								)
 							);
-							$wp_query = new WP_Query($args);					
+							$myposts = new WP_Query($args);					
 		?>
 		
 		<div class="entry-content">			
