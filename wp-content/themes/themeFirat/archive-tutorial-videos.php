@@ -33,7 +33,7 @@ get_header(); ?>
 						$type="parents";
 					}
 					$posts = get_posts(array(
-					'post_type'		=> 'event',
+					'post_type'		=> 'tutorial-videos',
 					'posts_per_page'	=> -1,
 					'meta_key'		=> 'video_embed_code',
 					'meta_value'		=> $type
