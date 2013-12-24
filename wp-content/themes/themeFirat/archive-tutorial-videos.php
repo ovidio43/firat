@@ -30,11 +30,11 @@ get_header(); ?>
 					
 					
 					
-					$type= $_GET['type'];
+					$type= $_GET["type"];
 					
-					if($type!="students"){
+					if( isset( $type ) ){
 						$type="parents";	
-					}
+					}					
 					$posts = get_posts(array(
 					'post_type'		=> 'tutorial-videos',
 					'posts_per_page'	=> -1,
