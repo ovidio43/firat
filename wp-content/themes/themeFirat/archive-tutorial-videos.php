@@ -66,10 +66,15 @@ get_header(); ?>
 			<?php	endif;	?>
 		</div>
 
-		<span style="color: #333399;"><em>** Students– Please click on Page 2 of myFES Tutorials on how to navigate myFES</em></span>
+		<?php if(!$types) { ?>
 		
-		<p class="pages">Pages: </p>
+				<span style="color: #333399;"><em>** Students– Please click on Page 2 of myFES Tutorials on how to navigate myFES</em></span>
+				<p class="pages">Pages: 1 <a href="/firat/tutorial-videos?type=students">2</a> </p>		
+		<?php }else{?>
 		
+				<p class="pages">Pages: <a href="/firat/tutorial-videos/">1</a> 2</p>		
+				
+		<?php } ?>						
 		</div>
  </div>
 
