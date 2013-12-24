@@ -43,12 +43,8 @@ get_header(); ?>
 						'post_type'     => $type,
 						'posts_per_page'    => 1,
 						'order' => 'ASC',
-						'meta_query'        => array(
-							array(
-								'key' => 'video_embed_code',
-								'value' => 'parents'									
-							)
-						)
+						'meta_key'		=> 'video_embed_code',
+						'meta_value'		=> 'parents'
 					);
 					$wp_query = new WP_Query($args);
 		?>
