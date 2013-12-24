@@ -43,7 +43,7 @@ get_header(); ?>
 							$type = 'tutorial-videos';							
 							$args = array(
 								'post_type'     => $type,
-								'posts_per_page'    => 1,
+								'posts_per_page'    => -1,
 								'order' => 'ASC',
 								'meta_query'        => array(
 									array(
