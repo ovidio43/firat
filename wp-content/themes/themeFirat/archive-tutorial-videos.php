@@ -66,7 +66,7 @@ get_header(); ?>
 			<?php	endif;	?>
 		</div>
 
-		<?php if($types) { ?>
+		<?php if($types=="parents") { ?>
 		
 				<span style="color: #333399;"><em>** Students– Please click on Page 2 of myFES Tutorials on how to navigate myFES</em></span>
 				<p class="pages">Pages: 1 <a href="/firat/tutorial-videos?type=students">2</a> </p>		
