@@ -30,7 +30,7 @@ get_header(); ?>
 					$types= $_GET['type'];
 					
 					if(!$types){
-						$type="parents";
+						$types="parents";
 					}
 					/*$posts = get_posts(array(
 					'post_type'		=> 'tutorial-videos',
@@ -54,7 +54,7 @@ get_header(); ?>
 							);
 							$myposts = new WP_Query($args);					
 		?>
-		<span><strong><?php echo $type; ?>:</strong></span>
+		<span><strong><?php echo $types; ?>:</strong></span>
 		<div class="entry-content">			
 			<?php	if ( $myposts->have_posts() ) :
 			
