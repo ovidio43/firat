@@ -9,21 +9,49 @@
 
 get_header(); ?>
  
+ <?php 
+ 
+ ?>
  
  <div id="main-content">
         
 		<div class="wrap-content">
 		
-		  <?php while ( have_posts() ) : the_post(); ?>
+		  <?php// while ( have_posts() ) : the_post(); ?>
          
-				<div class="entry-content">
-					<b><?php the_field('display_video_in');?>:</b><br><br>
-					<?php the_title(); ?><br><br>
-					<?php the_field('video_embed_code'); ?>					
+				<!--<div class="entry-content">
+					<b><?php ///the_field('display_video_in');?>:</b><br><br>
+					<?php //the_title(); ?><br><br>
+					<?php //the_field('video_embed_code'); ?>
+				</div>-->
+		  <?php //endwhile; // end of the loop. ?>		
+		  
+		<?php
+					$type= $_GET['type'];
 					
-				</div>
-		  <?php endwhile; // end of the loop. ?>
+					if($type!=""){
+						$type="parents";
+					}
+					$posts = get_posts(array(
+					'post_type'		=> 'event',
+					'posts_per_page'	=> -1,
+					'meta_key'		=> 'video_embed_code',
+					'meta_value'		=> $type
+					));
+					 
+					if($posts)
+					{
+							
+						/*foreach($posts as $post)
+						{							
+						}*/
+					 ?>
+						<span style="color: #333399;"><em>** Students– Please click on Page 2 of myFES Tutorials on how to navigate myFES</em></span>
+		<?php		}
+		?>		  
 		
+		
+		<p class="pages">Pages: </p>
 		
 		</div>
  </div>
