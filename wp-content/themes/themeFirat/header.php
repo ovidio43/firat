@@ -23,5 +23,10 @@
         <header id="header">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
             <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+            <div class="mobile-menu">
+                <span class="login">Login</span>
+                <span class="tweets">Tweets</span>
+                <span class="mob-menu">Menu</span>
+            </div>
         </header>
         <div class="wrapper">

@@ -100,7 +100,7 @@ textarea {
 
             }
             &.current_page_parent{
-                a{
+                >a{
                     color: #f1b22f;
                 }
                 ul{
@@ -108,7 +108,7 @@ textarea {
                 }
             }
             &.current_page_item{
-                a{
+                >a{
                     color: #f1b22f;
                 }
                 ul{
@@ -116,7 +116,7 @@ textarea {
                 }
             }
             &.current_page_item{
-                a{
+                >a{
                     color: #f1b22f;
                 }
                 ul{
@@ -149,7 +149,7 @@ textarea {
                 background: transparent;
                 border-bottom: 2px solid #cad8e6;
                 a{
-                    color: #295887!important;
+                    color: #295887;
                     font-weight: bold;
                     text-decoration: underline;
                 }                
@@ -296,11 +296,104 @@ textarea {
         }
     }
 }
-
-
-
-
-
+.mobile-menu{
+    display: none;
+}
+@media (max-width: 1270px) {
+    body{
+        &.home{
+            background-size: 40% 40%;            
+        }
+ 
+    }
+}
+@media (max-width: 1102px) {
+    .menu-main-menu-container ul li {
+        margin-left: 14px;
+    }
+}
+@media (max-width: 990px) {
+    .menu-main-menu-container ul li {
+        font-size: 14px;
+    }
+    #main-content .mbox{
+        width: 100%;
+    }
+}
+@media (max-width: 890px) {
+    .menu-main-menu-container{
+        height: auto;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        max-width: 400px;
+        display: none;
+        ul{
+            width: 100%;
+            background-color: #00b1da;
+            li{
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: 0;
+                a{
+                    color: #fff;
+                    display: block;
+                    padding: 5px 0 5px 20px;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                ul{
+                    display: block;
+                    position: inherit;                    
+                    li{
+                        a{
+                            color: #fff;
+                            text-decoration: none;
+                            
+                            padding: 0 0 0 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #header #logo{
+        margin: 10px 0 15px 10px;
+    }
+    .mobile-menu{
+        float: right;
+        display: block;
+        span{
+            background-color: #f4b132;
+            color: #fff;
+            font-size: 12px;
+            text-transform: uppercase;
+            background-image: url('../img/menu-mobile.png');
+            background-repeat: no-repeat;
+            display: inline-block;
+            padding: 45px 5px 5px 5px;
+            &.login{
+                background-position: -3px 0;
+            }
+            &.tweets{
+                background-position: -58px 0;
+            }
+            &.mob-menu{
+                background-position: -117px 0;
+            }
+        }
+    }
+    body{
+        &.home{
+            background:transparent;    
+            .wrap-content {
+                width:100%;
+            }                   
+        }
+    }  
+      
+}
 
 
 
