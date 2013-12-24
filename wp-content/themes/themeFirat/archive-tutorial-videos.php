@@ -1,6 +1,6 @@
 <?php
 /**
- * The default template for displaying autocam-media-image
+ * The default template for displaying Tutorial-Videos
  *
  * @package WordPress
  * @subpackage Twenty_Eleven
