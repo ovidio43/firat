@@ -27,10 +27,13 @@ get_header(); ?>
 		  <?php //endwhile; // end of the loop. ?>		
 		  
 		<?php
+					
+					
+					
 					$type= $_GET['type'];
 					
-					if($type){
-						$type="parents";
+					if($type!="students"){
+						$type="parents";	
 					}
 					$posts = get_posts(array(
 					'post_type'		=> 'tutorial-videos',
