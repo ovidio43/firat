@@ -75,6 +75,7 @@ get_header(); ?>
 		
 				<p class="pages">Pages: <a href="/firat/tutorial-videos/">1</a> 2</p>		
 				
+				
 		<?php } ?>						
 		</div>
  </div>
