@@ -373,11 +373,15 @@ textarea {
             background-repeat: no-repeat;
             display: inline-block;
             padding: 45px 5px 5px 5px;
+            &.active-nav{
+                background-color:#00b1da; 
+            }
             &.login{
                 background-position: -3px 0;
             }
             &.tweets{
                 background-position: -58px 0;
+                display: none;
             }
             &.mob-menu{
                 background-position: -117px 0;
@@ -394,7 +398,32 @@ textarea {
     }  
       
 }
-
+@media (max-width: 780px) {
+    .mobile-menu{
+        span{
+            &.tweets{
+                display: inline-block;
+            }
+        }
+    }
+    #sidebar-left{
+        display: none;
+        position: absolute;
+        width: 100%;
+        max-width: 260px;
+        right: 0;
+        top: 75px;
+        background-color: #00b1da;
+        padding: 10px;
+    }
+    #main-content{
+        width: 100%!important;
+    }
+    body.home .wrap-content{
+        max-width: 96%;
+        margin: 0 2%;
+    }    
+}
 
 
 
