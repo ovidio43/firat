@@ -37,9 +37,7 @@ get_header(); ?>
 					'posts_per_page'	=> -1
 					
 					));		*/
-
-
-
+   
 							$type = 'tutorial-videos';							
 							$args = array(
 								'post_type'     => $type,
@@ -52,7 +50,10 @@ get_header(); ?>
 									)
 								)
 							);
-							$myposts = new WP_Query($args);					
+							
+							
+					$myposts = new WP_Query($args);
+							
 		?>
 		<span><strong><?php echo $types; ?>:</strong></span>
 		<div class="entry-content">			
