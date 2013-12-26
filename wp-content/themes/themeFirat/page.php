@@ -23,21 +23,28 @@
 					$size = "full";
                     if($attachment_id){
                         echo wp_get_attachment_image( $attachment_id, $size );                        
-                    }else{
+                    }else if(get_field('display_title',get_the_ID())){
                         echo '<h1 class="entry-title">';
                         the_title();
                         echo '</h1>';
                     }
-                    if ( has_post_thumbnail() ) {
-                        echo"<br><div class='entry-thumbnail'>";
-                        the_post_thumbnail('medium');
-                        echo '</div>';
-                    }                     
-
         		?>
+                <?php
+                 if( get_field('box_in_right',get_the_ID()) )
+                { ?>
+                    <span class="test-dates-btb" rel="nav-hidden">Test Dates</span>
+                <?php    
+                } ?>                 
         	</div>
+            <?php
+                if ( has_post_thumbnail() ) {
+                    echo"<br><div class='entry-thumbnail'>";
+                    the_post_thumbnail('medium');
+                    echo '</div>';
+                } 
+            ?>
             <div class="wrap-share">
-                <?php getShare();?>
+                <?php getShare();?>                
             </div>            
         	<div class="entry-content">
 				<?php the_content();?>
