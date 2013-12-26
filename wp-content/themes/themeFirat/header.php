@@ -25,8 +25,8 @@
             <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
             <div class="mobile-menu">
                 <span class="login">Login</span>
-                <span class="tweets">Tweets</span>
-                <span class="mob-menu">Menu</span>
+                <span class="tweets" rel="nav-hidden">Tweets</span>
+                <span class="mob-menu" rel="nav-hidden">Menu</span>
             </div>
         </header>
         <div class="wrapper">
