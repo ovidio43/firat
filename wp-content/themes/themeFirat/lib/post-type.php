@@ -2,7 +2,8 @@
 
 function custom_post_type_init() {
     $post_types = array(
-        array("slug" => "tutorial-videos", "plural" => "Tutorial Videos", "singular" => "Tutorial Video", "rewrite" => "tutorial-videos", "public" => true, "archive" => true, "supports" => array('title'))
+        array("slug" => "tutorial-videos", "plural" => "Tutorial Videos", "singular" => "Tutorial Video", "rewrite" => "tutorial-videos", "public" => true, "archive" => true, "supports" => array('title')),
+        array("slug" => "test-dates", "plural" => "Test Dates", "singular" => "Test Date", "rewrite" => "test-dates", "public" => true, "archive" => true, "supports" => array('title'))
     );
 
     foreach ($post_types as $pt) {

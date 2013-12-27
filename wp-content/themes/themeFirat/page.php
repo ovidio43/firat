@@ -32,7 +32,7 @@
                 <?php
                  if( get_field('box_in_right',get_the_ID()) )
                 { ?>
-                    <span class="test-dates-btb" rel="nav-hidden">Test Dates</span>
+                    <span class="mob-nav-item test-dates-btb" rel="nav-hidden">Test Dates</span>
                 <?php    
                 } ?>                 
         	</div>

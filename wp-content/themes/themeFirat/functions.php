@@ -35,7 +35,15 @@ function firatTheme_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
-
+	register_sidebar( array(
+		'name'          => __( 'Header Widget Area', 'firatTheme' ),
+		'id'            => 'header-sidebar',
+		'description'   => __( 'Appears in the header section of the site.', 'firatTheme' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'firatTheme_widgets_init' );
 function getShare(){

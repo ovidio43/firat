@@ -24,9 +24,14 @@
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
             <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
             <div class="mobile-menu">
-                <span class="login">Login</span>
-                <span class="tweets" rel="nav-hidden">Tweets</span>
-                <span class="mob-menu" rel="nav-hidden">Menu</span>
+                <span class="login-btb mob-nav-item" rel="nav-hidden">Login</span>
+                <?php if( get_field('enabled_twitter_box') ){?>
+                <span class="tweets mob-nav-item" rel="nav-hidden">Tweets</span>
+                <?php }?>
+                <span class="mob-menu mob-nav-item" rel="nav-hidden">Menu</span>
             </div>
+            <?php if ( is_active_sidebar( 'header-sidebar' ) ) : ?>
+                <?php dynamic_sidebar( 'header-sidebar' ); ?>
+            <?php endif; ?>            
         </header>
         <div class="wrapper">

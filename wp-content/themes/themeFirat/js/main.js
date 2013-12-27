@@ -15,34 +15,26 @@ jQuery(document).ready(function() {
     jQuery(window).on("orientationchange", function() {
 
     });
-
-    jQuery('.mob-menu').bind('click', function(){
-    	if(jQuery(this).attr('rel')=='nav-hidden'){
-    		jQuery('.menu-main-menu-container').css('display','block');
-    		jQuery(this).attr('rel','nav-show').addClass('active-nav'); 		
-    	}else{
-    		jQuery('.menu-main-menu-container').css('display','none');
-    		jQuery(this).attr('rel','nav-hidden').removeClass('active-nav');  
-    	}
-    });
-    jQuery('.tweets').bind('click', function(){
-    	if(jQuery(this).attr('rel')=='nav-hidden'){
-    		jQuery('#sidebar-left').css('display','block');
-    		jQuery(this).attr('rel','nav-show').addClass('active-nav'); 		
-    	}else{
-    		jQuery('#sidebar-left').css('display','none');
-    		jQuery(this).attr('rel','nav-hidden').removeClass('active-nav'); 
-    	}
-    }); 
-    jQuery('.test-dates-btb').bind('click', function(){
-        if(jQuery(this).attr('rel')=='nav-hidden'){
-            jQuery('#sidebar-right').css('display','block');
-            jQuery(this).attr('rel','nav-show').addClass('active-nav');         
-        }else{
-            jQuery('#sidebar-right').css('display','none');
-            jQuery(this).attr('rel','nav-hidden').removeClass('active-nav'); 
-        }
-    }); 
+    function activeMenuMobile(selectorMain, selectorHidden){
+        jQuery(selectorMain).bind('click', function(){
+            
+            if(jQuery(this).attr('rel')=='nav-hidden'){
+                jQuery('.active-block').css('display','none');
+                jQuery('.active-nav').removeClass('active-nav');
+                jQuery('.mob-nav-item').attr('rel','nav-hidden');
+                jQuery(selectorHidden).css('display','block').addClass('active-block');
+                jQuery(this).attr('rel','nav-show').addClass('active-nav');         
+            }else{
+                jQuery(selectorHidden).css('display','none').removeClass('active-block');
+                jQuery(this).attr('rel','nav-hidden').removeClass('active-nav');  
+            }
+        });
+    }
+    activeMenuMobile('.mob-menu', '.menu-main-menu-container');
+    activeMenuMobile('.tweets', '#sidebar-left');
+    activeMenuMobile('.test-dates-btb', '#sidebar-right');
+    activeMenuMobile('.login-btb', '.login');
+   
        
     
 });

@@ -80,7 +80,31 @@ textarea {
     #logo{
         float: left;
         margin: 69px 0 15px 10px;    
-    }    
+    } 
+    .login{
+        width: 550px;
+        position: absolute;
+        top: 65px;
+        right: 5%;
+        color: #fff;
+        .col5{
+            float: left;
+            margin:0 2px;
+            a{
+                font-size: 12px;
+            }
+        }
+        input[type="text"], input[type="password"] {
+            width: 140px;
+        }
+        input[type="button"], input[type="submit"] {
+            cursor: pointer;
+            line-height: 19px;
+            padding: 5px 7px;
+            text-decoration: none;
+            width: auto;
+        }        
+    }   
 }
 .blue{
     color: #99ccff;
@@ -189,7 +213,6 @@ textarea {
     width: 100%;
     padding: 2% 2%;
     overflow: hidden;
-    position: relative;
 }
 #sidebar-left{
     float: left;
@@ -202,12 +225,28 @@ textarea {
     float: right;
     font-size: 14px;
     width: 280px;
+    h2{
+        font-size: 14px;
+        color: #fff;
+         margin: 0 0 5px;
+        font-weight: bold;
+    }
     .bluebox {
         background-color: #aedfe5;
         padding: 10px;
         -webkit-border-radius: 7px;
         -moz-border-radius: 7px;
         border-radius: 7px;
+        color: #333333;
+        font-family: 'Century Gothic',Questrial,sans-serif;
+        font-size: 14px;
+        line-height: 1.25;        
+        a{
+            color: #00B2D9;
+            font-weight: bold;
+            line-height: 2em;
+             margin: 0 0 5px;         
+        }
     }    
 }
 #main-content {
@@ -234,8 +273,8 @@ textarea {
         }
         .test-dates-btb{
             position: absolute;
-            right: 0;
-            bottom: -20px;
+            right: -10px;
+            top: 0px;
             display: none;
             background-color: #AEDFE5;
             -webkit-border-radius: 5px;
@@ -262,7 +301,7 @@ textarea {
         background-color: #eaf6f9;
         padding: 10px;
         float: left;
-        width: 700px;
+        max-width: 700px;
         h2{
             color: #00b2d9;
             text-transform: uppercase;
@@ -356,9 +395,13 @@ textarea {
     background-position: top left;
     padding: 44px 0 30px 0;
     .wrap-footer{
+        background: url('../img/footer-logo.png');
+        background-repeat: no-repeat;
+        background-position: top right;
         max-width: 960px;
         margin: 0 auto;
         font-size: 12px;
+        padding: 10px 0;
         .copy{
 
         }
@@ -382,7 +425,9 @@ textarea {
 .mobile-menu{
     display: none;
 }
-
+.mobile-display{
+    display: none;
+}
 @media (max-width: 1270px) {
     body{
         &.home{
@@ -402,7 +447,7 @@ textarea {
         display: none;
         position: absolute;
         right: 0;
-        top: 3%;
+        top: 135px;
     } 
     .entry-content{
         iframe{
@@ -429,7 +474,7 @@ textarea {
         height: auto;
         position: absolute;
         right: 0;
-        top: 75px;
+        top: 68px;
         max-width: 400px;
         display: none;
         z-index: 100;
@@ -441,6 +486,12 @@ textarea {
                 height: auto;
                 display: block;
                 margin: 0;
+                border-bottom: 1px solid #25bcdf;
+                &.myfes a{
+                    background: transparent;
+                    text-indent: 0;
+                    width: auto;
+                }                
                 a{
                     color: #fff;
                     display: block;
@@ -450,22 +501,54 @@ textarea {
                 }
                 ul{
                     display: block;
-                    position: inherit;                    
+                    position: inherit;
+                    border-bottom: 0;                    
                     li{
                         a{
                             color: #fff;
                             text-decoration: none;
-                            
-                            padding: 0 0 0 40px;
+                            padding: 5px 0 5px 40px;
                         }
                     }
                 }
             }
         }
     }
-    #header #logo{
-        margin: 10px 0 15px 10px;
+    #header{
+        #logo{
+            margin: 10px 0 15px 10px;
+        }  
+        .login{
+            background: none repeat scroll 0 0 #00B1DA;
+            display: none;
+            max-width: 400px;
+            width: 100%;
+            right: 0;
+            top: 68px;
+            z-index: 100;
+            padding: 5% 0;
+            .mobile-display{
+                display: inline-block;
+            }
+            .mobile-hidden{
+                display: none;
+            }          
+            .col5{
+                padding:5px 5%;
+                width: 100%;
+                a{
+                    color: #fff;
+                }
+            }
+            input[type="text"], input[type="password"] {
+                width: 100%;
+            }
+            input[type="button"], input[type="submit"] {
+                width: auto;
+            }            
+        }        
     }
+
     .mobile-menu{
         float: right;
         display: block;
@@ -483,7 +566,7 @@ textarea {
             &.active-nav{
                 background-color:#00b1da; 
             }
-            &.login{
+            &.login-btb{
                 background-position: -3px 0;
             }
             &.tweets{
@@ -508,8 +591,28 @@ textarea {
             width: 100%;
             height: auto;
         }        
-    } 
-      
+    }
+    #main-content .mbox{
+        .col3{
+            width: 100%;
+        }
+    }
+
+    #footer .menu-footer-menu-container{
+        ul{
+            text-align: center;
+            li a {
+                display: inline-block;
+                padding: 5px 8px;
+            }        
+        }
+    }         
+    .wrap-footer{
+        .copy{
+            text-align: center;
+        }        
+    }
+
 }
 @media (max-width: 780px) {
     .mobile-menu{
@@ -523,11 +626,21 @@ textarea {
         display: none;
         position: absolute;
         width: 100%;
-        max-width: 260px;
+        max-width: 400px;
         right: 0;
-        top: 75px;
+        top: 68px;
         background-color: #00b1da;
         padding: 10px;
+        .minitweets{
+            float: inherit;
+            iframe{
+                width: 100%;
+            }
+        }
+    }
+    .wrapper{
+        float: left;
+        overflow: visible;
     }
     #main-content{
         width: 100%!important;
@@ -545,6 +658,12 @@ textarea {
             width: 100%;
         }
     }
+    #footer{
+        background-image: url("../img/footer-bg-mob.png");
+        background-position: left top;
+        background-repeat: no-repeat;
+        padding: 23px 0 30px;
+    }
 }
 @media (max-width: 600px) {
     .video-container{ 
@@ -555,11 +674,12 @@ textarea {
         overflow: hidden; 
     } 
     .video-container iframe, .video-container object, .video-container embed { 
-        position: absolute; 
+        
         top: 0; 
         left: 0; 
         width: 100%!important; 
-        height: 100%!important; 
+        height: 300px!important; 
+        z-index: 100;
     } 
     .rightinfo2{
         img{

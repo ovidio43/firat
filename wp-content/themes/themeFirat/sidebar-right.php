@@ -1,5 +1,44 @@
 <div class="bluebox">
-  <h2>2014 SAT Test Dates</h2>
+
+    <?php
+        $type="test-dates";             
+      $args = array(
+        'post_type'     => $type,
+        'posts_per_page'    => -1
+      );
+      $myposts = new WP_Query($args);
+              
+    ?>
+      <?php if ( $myposts->have_posts() ) :
+          while ( $myposts->have_posts() ) : ?>               
+          <?php   $myposts->the_post();  ?>
+            <h2><?php the_title();?></h2>
+              <?php
+              $rows = get_field('details_test_dates');
+              if($rows)
+              {
+                foreach($rows as $row)
+                {?>
+                  <p><strong><?php echo $row['test_date_fes'];?></strong><br>
+                  <?php echo $row['detail_fes'];?></p>    
+                <?php }
+              }
+              ?>
+              <?php
+              $rows = get_field('adittional_info');
+              if($rows)
+              { echo '<p>';
+                foreach($rows as $row)
+                {?>
+                  <a href="<?php echo $row['url_fes'];?>" target="_blank"><?php echo $row['title_url_fes'];?></a> <br>
+                <?php }
+                echo '</p>';
+              }
+              ?>  
+          <?php endwhile; ?>                
+      <?php endif;  ?>
+
+  <!--h2>2014 SAT Test Dates</h2>
 
   <p><strong>January 25, 2014</strong><br>
     SAT &amp; SAT Subject Tests<br>
@@ -49,5 +88,5 @@
     </p><p><a href="http://www.mba.com/" target="_blank">GMAT<br>
     </a></p><p><a href="http://www.ets.org/gre/" target="_blank">GRE<br>
     </a></p><p><a href="http://www.lsac.org/jd/lsat/test-dates-deadlines.asp" target="_blank">LSAT<br>
-    </a></p><p><a href="https://www.aamc.org/students/applying/mcat/" target="_blank">MCAT</a></p>
+    </a></p><p><a href="https://www.aamc.org/students/applying/mcat/" target="_blank">MCAT</a></p-->
   </div>
