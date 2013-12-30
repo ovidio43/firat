@@ -597,7 +597,17 @@ textarea {
             width: 100%;
         }
     }
-
+    #footer{
+        float: left;
+        width: 100%;
+        .wrap-footer{
+            padding: 63px 0 10px;
+            background-position: top center;
+            .copy{
+                text-align: center;
+            }        
+        }        
+    }
     #footer .menu-footer-menu-container{
         ul{
             text-align: center;
@@ -607,11 +617,7 @@ textarea {
             }        
         }
     }         
-    .wrap-footer{
-        .copy{
-            text-align: center;
-        }        
-    }
+
 
 }
 @media (max-width: 780px) {
@@ -644,6 +650,7 @@ textarea {
     }
     #main-content{
         width: 100%!important;
+        max-width: 100%!important;
     }
     #main-content .wrap-content{
         max-width: 96%;

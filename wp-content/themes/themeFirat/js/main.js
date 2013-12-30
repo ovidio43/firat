@@ -3,9 +3,15 @@ jQuery(document).ready(function() {
 
 	function getHeightWidthElements() {
         if(jQuery("#sidebar-right").css('top')=="auto"){
-            jQuery("#main-content").width(jQuery(".wrapper").width()-(jQuery("#sidebar-left").width()+jQuery("#sidebar-right").width()));
+            var w =jQuery(".wrapper").width()-(jQuery("#sidebar-left").width()+jQuery("#sidebar-right").width());
+            
+            jQuery("#main-content").css("max-width",w-2);
+            jQuery("#main-content").width(w);
         }else{
-            jQuery("#main-content").width(jQuery(".wrapper").width()-(jQuery("#sidebar-left").width()));
+            var w= jQuery(".wrapper").width()-(jQuery("#sidebar-left").width()); 
+            jQuery("#main-content").css("max-width",w-1);
+            jQuery("#main-content").width(w);
+            
         }
 	}
     getHeightWidthElements();
