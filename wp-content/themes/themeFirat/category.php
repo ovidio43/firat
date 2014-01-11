@@ -9,7 +9,17 @@
  */
 
 get_header(); ?>       
- 
+     <?php
+     if( get_field('enabled_twitter_box') )
+    {     
+        $display_box="enabled_twitter_box"; 
+    }else{
+        $display_box="nodisplay"; 
+    }
+    ?>        
+    <div id="sidebar-left" class="<?php echo $display_box;?>">
+        <?php get_sidebar('left');?>
+    </div>
  <div id="main-content">
         
 	<div class="wrap-content">		
@@ -19,7 +29,7 @@ get_header(); ?>
 				<h1 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h1>
 				<div class="post-info"></div>																
 				<div class="entry-content">
-					<div class="col-xs-2 col-sm-2 col-md-2">
+					<div class="col-xs-12 col-sm-2 col-md-2">
 						<?php
 						    if ( has_post_thumbnail() ) {
 						        echo'<a href="'.get_permalink().'"><div class="entry-thumbnail">';
@@ -28,7 +38,7 @@ get_header(); ?>
 						    } 
 						?>
 					</div>
-					<div class="col-xs-10 col-sm-10 col-md-10">
+					<div class="col-xs-12 col-sm-10 col-md-10">
 						<a href="<?php the_permalink();?>"><?php the_excerpt();?></a>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-12">

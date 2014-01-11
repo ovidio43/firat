@@ -3,18 +3,16 @@
  get_header();?>
     <?php
      if( get_field('enabled_twitter_box') )
-    { ?>
-        <div id="sidebar-left">
-            <?php get_sidebar('left');?>
-        </div>
-    <?php    
-        $left_s="whit-left-sidebar";
+    {     
+        $display_box="enabled_twitter_box"; 
+    }else{
+        $display_box="nodisplay"; 
     }
-     if( get_field('box_in_right') ){
-        $right_s="whit-right-sidebar";
-    }
-    ?>
-    <div id="main-content" class="<?php echo $left_s.' '.$right_s;?>">
+    ?>        
+    <div id="sidebar-left" class="<?php echo $display_box;?>">
+        <?php get_sidebar('left');?>
+    </div>
+    <div id="main-content">
         <div class="wrap-content">
         <?php while ( have_posts() ) : the_post(); ?>
         	<div class="entry-title">

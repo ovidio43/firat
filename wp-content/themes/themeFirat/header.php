@@ -25,9 +25,9 @@
             <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
             <div class="mobile-menu">
                 <span class="login-btb mob-nav-item" rel="nav-hidden">Login</span>
-                <?php if( get_field('enabled_twitter_box') ){?>
+                
                 <span class="tweets mob-nav-item" rel="nav-hidden">Tweets</span>
-                <?php }?>
+                
                 <span class="mob-menu mob-nav-item" rel="nav-hidden">Menu</span>
             </div>
             <?php if ( is_active_sidebar( 'header-sidebar' ) ) : ?>

@@ -3,12 +3,12 @@ jQuery(document).ready(function() {
 
 	function getHeightWidthElements() {
         if(jQuery("#sidebar-right").css('top')=="auto"){
-            var w =jQuery(".wrapper").width()-(jQuery("#sidebar-left").width()+jQuery("#sidebar-right").width());
+            var w =jQuery(".wrapper").width()-(jQuery(".enabled_twitter_box").width()+jQuery("#sidebar-right").width());
             
             jQuery("#main-content").css("max-width",w-2);
             jQuery("#main-content").width(w);
         }else{
-            var w= jQuery(".wrapper").width()-(jQuery("#sidebar-left").width()); 
+            var w= jQuery(".wrapper").width()-(jQuery(".enabled_twitter_box").width()); 
             jQuery("#main-content").css("max-width",w-1);
             jQuery("#main-content").width(w);
             
