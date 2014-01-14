@@ -428,6 +428,47 @@ textarea {
 .mobile-display{
     display: none;
 }
+
+.left-info {
+float: left;
+width: 540px;
+}
+.right-info {
+float: left;
+margin-left: 50px;
+width: 663px;
+}
+.bbox {
+background-color: #EAF6F9 ;
+float: left ;
+padding: 10px ;
+}
+.clearfix {
+    clear: both !important;
+}
+.col1 {
+    float: left;
+    padding: 5px;
+    width: 220px;
+}
+.bbox h2 {
+    color: #00B2D9;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.bbox p {
+    font-size: 14px;
+    line-height: normal;
+}
+.col1 h2, .col2 h2 {
+    font-family: Arial,Helvetica,sans-serif;
+    padding: 0; 
+
+}
+.col2 {
+    width: auto;
+}
 @media (max-width: 1270px) {
     body{
         &.home{
@@ -674,6 +715,17 @@ textarea {
         background-repeat: no-repeat;
         padding: 23px 0 30px;
     }
+    .left-info{
+        width: 100%;
+    }
+    .right-info{
+        width: 100%;
+        margin-left: 0px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 @media (max-width: 600px) {
     .video-container{ 
@@ -713,6 +765,9 @@ textarea {
             width: 100%;
             height: auto;
         }
+    }
+    .col1{
+        width: 100%;
     }
     #main-content{
         .mbox{
