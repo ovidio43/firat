@@ -1,18 +1,26 @@
 jQuery(document).ready(function() {
 
 
+
 	function getHeightWidthElements() {
         if(jQuery("#sidebar-right").css('top')=="auto"){
             var w =jQuery(".wrapper").width()-(jQuery(".enabled_twitter_box").width()+jQuery("#sidebar-right").width());
             
             jQuery("#main-content").css("max-width",w-2);
             jQuery("#main-content").width(w);
+            jQuery('iframe').width(w);
+            jQuery('iframe').attr('width',w);
+            jQuery('iframe').css('max-width',w);
         }else{
             var w= jQuery(".wrapper").width()-(jQuery(".enabled_twitter_box").width()); 
             jQuery("#main-content").css("max-width",w-1);
             jQuery("#main-content").width(w);
+            jQuery('iframe').width(w);
+            jQuery('iframe').attr('width',w);
+            jQuery('iframe').css('max-width',w);
             
         }
+
 	}
     getHeightWidthElements();
     jQuery(window).resize(function() {

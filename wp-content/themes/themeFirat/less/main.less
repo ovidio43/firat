@@ -664,6 +664,8 @@ textarea {
     .entry-content{
         iframe{
             width: 100%;
+            max-width: 100%;
+            overflow: hidden;
         }
     }
     #footer{
@@ -679,7 +681,6 @@ textarea {
 
     } 
     .video-container iframe, .video-container object, .video-container embed { 
-        
         top: 0; 
         left: 0; 
         width: 100%!important; 
@@ -692,6 +693,12 @@ textarea {
             height: auto;
         }
     }     
+    #main-content .entry-title{
+        img{
+            width: 50%;
+            height: auto;
+        }
+    }
 }
 @media (max-width: 480px) {
     #header #logo{
