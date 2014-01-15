@@ -27,18 +27,24 @@ get_header(); ?>
 	 <?php while ( have_posts() ) : the_post(); ?>         
 			<div  id="post-<?php the_ID(); ?>" <?php post_class(); ?>>					
 				<h1 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h1>
-				<div class="post-info"></div>																
+				<div class="post-info">
+				<?php
+				if ( 'post' == get_post_type() )
+					firatTheme_posted_on();
+				?>
+				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'firatTheme' ), __( '1 Comment', 'firatTheme' ), __( '% Comments', 'firatTheme' ) ); ?></span></div>																
 				<div class="entry-content">
+					<?php if ( has_post_thumbnail() ) {?>
 					<div class="col-xs-12 col-sm-2 col-md-2">
 						<?php
-						    if ( has_post_thumbnail() ) {
 						        echo'<a href="'.get_permalink().'"><div class="entry-thumbnail">';
 						        the_post_thumbnail('thumbnail');
 						        echo '</div></a>';
-						    } 
+						        $col = "col-sm-12 col-md-12";
 						?>
 					</div>
-					<div class="col-xs-12 col-sm-10 col-md-10">
+					<?php }else{ $col = "col-sm-12 col-md-12";}?>
+					<div class="col-xs-12 <?php echo $col;?>">
 						<a href="<?php the_permalink();?>"><?php the_excerpt();?></a>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-12">

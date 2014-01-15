@@ -22,6 +22,12 @@
                     echo '</h1>';
         		?>
         	</div>
+<div class="post-info">
+                <?php
+                if ( 'post' == get_post_type() )
+                    firatTheme_posted_on();
+                ?>
+                <span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'firatTheme' ), __( '1 Comment', 'firatTheme' ), __( '% Comments', 'firatTheme' ) ); ?></span></div>              
             <div class="wrap-share">
                 <?php getShare();?>
                 <?php
@@ -35,6 +41,37 @@
         	<div class="entry-content">
 				<?php the_content();?>
         	</div>
+<div class="post-meta">
+    <span class="categories">
+            <?php
+                /* translators: used between list items, there is a space after the comma */
+                $categories_list = get_the_category_list( __( ', ', 'firatTheme' ) );
+                if ( $categories_list ):
+            ?>
+            <span class="cat-links">
+                <?php printf( __( '<span class="%1$s">Filed Under:</span> %2$s', 'firatTheme' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list );
+                $show_sep = true; ?>
+            </span>
+            <?php endif; // End if categories ?>
+    </span>
+    <span class="tags">
+        <?php
+            /* translators: used between list items, there is a space after the comma */
+            $tags_list = get_the_tag_list( '', __( ', ', 'firatTheme' ) );
+            if ( $tags_list ):
+            if ( $show_sep ) : ?>
+        <span class="sep"> | </span>
+            <?php endif; // End if $show_sep ?>
+        <span class="tag-links">
+            <?php printf( __( '<span class="%1$s">Tagged With:</span> %2$s', 'firatTheme' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list );
+            $show_sep = true; ?>
+        </span>
+        <?php endif; // End if $tags_list ?>
+    </span>
+</div>            
+            <?php if ( comments_open() || get_comments_number() ) {
+                        comments_template();
+                    }?>
         <?php endwhile; // end of the loop. ?> 
         </div>   
     </div>   
