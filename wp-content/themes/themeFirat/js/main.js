@@ -10,14 +10,7 @@ jQuery(document).ready(function() {
             jQuery("#main-content").css("max-width", w - 1);
             jQuery("#main-content").width(w);
         }
-        if (jQuery(window).width() <= 320) {
-            jQuery('.btn-iframe').show();
-            jQuery('.iframe-form').hide();
-        } else {
-            jQuery('.btn-iframe').hide();
-            jQuery('.iframe-form').show();
-        }
-
+     
     }
     getHeightWidthElements();
     jQuery(window).resize(function() {
