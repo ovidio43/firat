@@ -221,10 +221,10 @@ textarea {
         display: none;
     }    
 }
-.display_ext_form{
+a.display_ext_form{
     background: #0d72c7;
-    color: #fff;
-    display: inline-block;
+    color: #fff!important;
+    display: none;
     padding: 8px 10px;
     border-radius: 5px;
     
@@ -779,6 +779,9 @@ padding: 10px ;
     .iframe-form{
         display: none;
     }
+    a.display_ext_form{
+        display: inline-block;
+    }
 }
 @media (max-width: 480px) {
     #header #logo{
@@ -805,8 +808,8 @@ padding: 10px ;
         }
         .entry-title{
             img{
-                height: 30px;
-                width: auto;
+                height: auto;
+                width: 50%;
             }
         }        
     } 
