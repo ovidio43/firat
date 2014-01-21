@@ -14,6 +14,7 @@
 
         <script src="<?php echo get_template_directory_uri(); ?>/js/plugins.js"></script>
         <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/validate-form.js"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
