@@ -1,6 +1,6 @@
 <?php
 /*
-*Template name: 
+*Template name:  register start your form
 *
 */
 $step = $_GET['step'];

@@ -6,7 +6,7 @@
                     <p class="size_p"> Please fill out the information below </p>
                     <p class="size_p font-weight">
                         Please note that not all dates and/or locations may be available at the time of your request.  We will notify you via email confirmations. <br>
-                        <span class="date_required">*Obligatorio</span>
+                        <span class="date_required">*Required</span>
                     </p>
 
                     <div class="content_block ">

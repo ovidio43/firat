@@ -1,6 +1,6 @@
 <?php
 /*
-*Template name: 
+*Template name: 2nd saturday form
 *
 */
 $step = $_GET['step'];
