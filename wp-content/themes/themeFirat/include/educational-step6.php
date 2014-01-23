@@ -15,9 +15,9 @@ foreach ($_POST as $key => $value) {
 
     <h2 class="ss-page-title">Equal Employment Opportunity Data Form</h2>
     <div class="ss-page-description ss-no-ignore-whitespace">Firat Educational Solutions, LLC is an equal opportunity employer and surveys all job applicants in accordance with the U.S. Department of Labor&rsquo;s affirmative action requirements. Therefore, Firat Educational Solutions, LLC requests that you complete this optional personal data form. Information will be detached and kept separate from your application of employment. Any information that you choose to provide will be treated as personal and confidential. </div>
-
-    <label class="ss-q-title" for="entry_233">Gender
-    </label>
+<div class="content_block ">
+    <div class="align_left">
+    <label class="ss-q-title" for="entry_233">Gender</label>
     <?php
     $selected = Array();
     $selected[0] = 'Male';
@@ -39,16 +39,17 @@ foreach ($_POST as $key => $value) {
         }
         ?> 
     </select>
-
-    <label class="ss-q-title" for="entry_235">Birth Date
-    </label>
+    </div>
+    <div class="align_right ">
+    <label class="ss-q-title" for="entry_235">Birth Date</label>
     <label class="ss-q-help" for="entry_235">(MM/DD/YYYY)</label>
     <input type="text" name="entry235single" value="<?php echo $_SESSION['entry235single']; ?>" class="ss-q-short" id="entry_235">
-
-    <label class="ss-q-title" for="entry_237">Ethnicity Category
-    </label>
+    </div>
+</div>
+<div class="content_block ">
+    <div class="full-block">
+    <label class="ss-q-title" for="entry_237">Ethnicity Category</label>
     <label class="ss-q-help" for="entry_237">Please check the box(es) that best describes your race/ethnicity:</label>
-
     <ul class="ss-choices">
         <li class="ss-choice-item"><label class="ss-choice-label">
                 <input type="checkbox" name="entry237group" value="WHITE: Persons having origins in any of the original peoples of Europe, North Africa, or the Middle East." class="ss-q-checkbox" id="group_237_1">
@@ -72,9 +73,11 @@ foreach ($_POST as $key => $value) {
             <input type="checkbox" name="entry237group" value="__option__" class="ss-q-checkbox" id="other_option:237"><label for="other_option:237">Other:</label>
             <input type="text" name="entry237groupother_option_" value="<?php echo $_SESSION['entry237groupother_option_']; ?>" class="ss-q-other"></li>
     </ul>
-
+    </div>
+</div>
+<div class="content_block ">
+    <div class="full-block">
     <label class="ss-q-title" for="entry_241">How did you hear about us?</label>
-
     <label class="ss-q-help" for="entry_241">Please check all that apply</label>
     <ul class="ss-choices">
         <li class="ss-choice-item"><label class="ss-choice-label">
@@ -104,7 +107,9 @@ foreach ($_POST as $key => $value) {
         <li class="ss-choice-item"><input type="checkbox" name="entry.241.group" value="__option__" class="ss-q-checkbox" id="other_option:241"><label for="other_option:241">Other:</label>
             <input type="text" name="entry241groupother_option_" value="<?php echo $_SESSION['entry241groupother_option_']; ?>" class="ss-q-other"></li>
 
-    </ul>F    
+    </ul>
+    </div>
+</div>
     <input type="hidden" name="backupCache" value="">
 
     <button type="button" id="back-page" >Back</button>

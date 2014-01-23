@@ -20,7 +20,6 @@
                             <p><b>Parent Email Address </b><span class="ss-required-asterisk">*</span></p>
                             <input name="parent_email_address" id="parent_email_address" type="text" value="" class="imput_date">
                         </div>
-
                     </div> 
                      <div class="content_block ">
                         <div class="align_left">
