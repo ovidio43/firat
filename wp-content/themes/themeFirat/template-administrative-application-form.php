@@ -12,7 +12,8 @@ if (get_field('enabled_twitter_box')) {
 } else {
     $display_box = "nodisplay";
 }
-?>        
+?>   
+<h1>jojojojo</h1>;
 <div id="sidebar-left" class="<?php echo $display_box; ?>">
     <?php get_sidebar('left'); ?>
 </div>
