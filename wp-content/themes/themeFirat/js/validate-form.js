@@ -29,7 +29,7 @@ jQuery(document).ready(function() {
 	    },		
 		submitHandler: function() {
 		   var query = jQuery('#formData :input:not(input[type=submit])').serialize();
-		   var srcPath = jQuery(".send").attr('rel');	
+		   var srcPath = jQuery("#formData").attr('action');	
 			  jQuery.ajax({
                     type: "POST",
                     url: srcPath,
@@ -39,68 +39,54 @@ jQuery(document).ready(function() {
                      },
                     success: function(data) {
                             jQuery('#msg').html(data);
-                            jQuery('#student_Name').text('');
                     }				
 			});
 		}
 	});
 	
-	
-	
-	
-	/****		
-	*/	
-     $("#formdata-one").validate({
-                rules: {
-                    first_name: {required: true },
-                    last_name: {required: true},
-                    email: {required: true, minlength: 2},
-                    phone_number: {required: true},
-                    __address: {required: false},
-                    __city_state: {required: true},
-                     __zip_code:{required:false},
-                    you_like_contacted:{required: true},
-                    consultation_session:{required:true},
-                    student_name:{required: true},
-                    entry_single:{required: true},
-                    student_current_school:{required: true},
-                    student_overall_gpa:{required: true},
-                    standardid_tests:{required: true}, 
-                    student_scores:{required: false},
-                    student_struggles:{required: true},
-                    fes_service:{required: true},
-                    about_us:{required: false}
-                    
-    //  //        sexo: {required: true, minlength: 2},
-    //              email: {required: false, email: true},
-    //              telefono: {digits: true, minlength: 2, maxlength: 15},
-    //              telefono_referencia: {digits: true, minlength: 2, maxlength: 15}
-                },
-    //          messages: {
-    //              nombres: "**",
-    //              apellidos: "**",
-    //              email: "**",
-    //              telefono: "**",
-    //              telefono_referencia: "**"
-    //          },
-                submitHandler: function(form) {
-                        
-                    var url = $(form).attr('action');               
-                    var formData = new FormData($(form)[0]);
-                    $.ajax({
-                        url: url,
-                        type: 'POST',
-                        data: formData,
-                        async: false,
-                        cache: false,
-                        contentType: false,
-                        processData: false,
-                        success: function(data) {
-                             $('#datos_form_two').html(data);                               
-                        }
-                    });
-                }
+  jQuery("#formdata-one").validate({
+        rules: {    
+            first_name: {required: true },
+            last_name: {required: true},
+            email: {required: true, minlength: 2},
+            phone_number: {required: true},
+            __address: {required: false},
+            __city_state: {required: true},
+             __zip_code:{required:false},
+            you_like_contacted:{required: true},
+            consultation_session:{required:true},
+            student_name:{required: true},
+            entry_single:{required: true},
+            student_current_school:{required: true},
+            student_overall_gpa:{required: true},
+            standardid_tests:{required: true}, 
+            student_scores:{required: false},
+            student_struggles:{required: true},
+            fes_service:{required: true},
+            about_us:{required: false}
+        },
+        highlight: function(label) {
+            jQuery('#msg').html('');
+        },
+        success: function(label) {
+            jQuery('#msg').html('');
+        },      
+        submitHandler: function() {
+           var query = jQuery('#formdata-one :input:not(input[type=submit])').serialize();
+           var srcPath = jQuery("#formdata-one").attr('action');    
+              jQuery.ajax({
+                    type: "POST",
+                    url: srcPath,
+                    data: jQuery("#formdata-one").serialize(),
+                    beforeSend: function(objeto){
+                            jQuery("#msg").html("Sending...");
+                     },
+                    success: function(data) {
+                            jQuery('#msg').html(data);
+                    }               
             });
-  
+        }
+    });
+	
   
 });

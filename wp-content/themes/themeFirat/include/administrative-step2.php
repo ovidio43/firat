@@ -27,7 +27,6 @@ foreach ($_POST as $key => $value) {
     <h2 class="ss-section-title">College/University Attended</h2>
 
     <label class="ss-q-title" for="entry_36">Name of college or university attended<span class="ss-required-asterisk">*</span></label>
-
     <input type="text" name="entry36single" value="<?php echo $_SESSION['entry36single']; ?>" class="ss-q-short" id="entry_36">
     <label class="ss-q-title" for="entry_42">Degree type<span class="ss-required-asterisk">*</span></label>
     <input type="text" name="entry42single" value="<?php echo $_SESSION['entry42single']; ?>" class="ss-q-short" id="entry_42">

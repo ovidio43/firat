@@ -3,113 +3,71 @@
    Author's custom styles
    ========================================================================== */
 
-   .date_required{
-       color:red;
-   }
-   .border-botoom{
-       border-bottom:1px dotted #fff;
-       width:50%;
-   }
-  
-   .required{
-       color:red;
-   }
-   label.error{
-    color: red;
-   }
-   .position_relative_left{
-        position:relative;
-        float:left;
-    }
-   .content-form{
-        width:100%;
-        margin:0px;
-        position:relative;
-        float:left;
-        &.backgroud_form{
-            background:#fff;
-        }
-        .wrap_date{
-            margin: 20px;
-            position:relative;
-            float:left;
-            .size_p{
-                color:#000;
-                &.font-weight{
-                    font-weight:normal;
-                }
+.ss-required-asterisk{
+   color:red;
+}
+label.error{
+color: red;
+margin: 0;
+}
 
-            }
-            .send{
-             position:relative;
-             float:left;
-             width:70px;
-            }
-            p{
-            color:#fff;
-            font-size:12px;
-            font-weight:bold;
-            }
-            .content_block{
-                width:100%;
-                margin-bottom:20px;
-                position:relative;
-                float:left;
-                .limit_parrafo{
-                    width:40%;
-                }
-                textarea{
-                    margin-left:20px;
-                    width:35%;
-                    height:135px;
-                }
-                h4{
-                    margin-left:20px;
-                }
-                input[type="text"]{
-                    width: 95%;
-                }
-                &.fondo_baground{
-                    background:#fff;
-                    padding-bottom: 17px;
-                    font-size: 14px;
-                    p{
-                        margin-left:20px;
-                        font-weight:bold;
-                    }
-                }
-                
-                p{
-                    color:#000;
-                    .resalte{
-                        color:#b6b5b5;
-                    }
-                }
-                .align_left{
-                   float:left; 
-                     &.height_shet{
-                         width:40%;
-                         position:relative;
-                         select{
-                            margin-left:20px;
-                         }
-                     }  
-                }
-                .align_right{
-                   float:right; 
-                }
-            } 
-            .complete_date{
-                width:48%;
-                background:#fff;
-                position:relative;
-                padding-left:20px;
-                padding-bottom:20px;
-            }
-             
+.position_relative_left{
+    position:relative;
+    float:left;
+}
+.content-form{
+    width:100%;
+    max-width: 600px;
+    margin:0px;
+    position:relative;
+    float:left;
+    border-top: 5px solid #ccc;
+    .content_block{
+        width: 100%;
+        overflow: hidden;
+        font-size: 14px;
+        p{
+            margin: 0 0 0 0;
         }
-        
-   }
+        label{
+            font-weight: normal;
+            margin: 0 0 0 5px;
+        }
+    }
+    .explain{
+        font-size: 12px;
+        line-height: 1.3em;
+        display: inline-block;
+    }
+    input[type="text"]{
+        width: 100%;
+        border: 1px solid #ccc;
+        &.small-text{
+            width: 200px;
+        }
+    }
+    textarea{
+        width: 100%;
+        height: 100px;
+    }
+    .align_left{
+        float: left;
+        width: 45%;
+        text-align: left;
+        padding: 0 0 10px 0;
+    }
+    .align_right{
+        float: right;
+        width: 45%;
+        text-align: left;
+        padding: 0 0 10px 0;
+    }
+    .full-block{
+        float: left;
+        width: 100%;
+        padding: 0 0 10px 0;
+    }
+}
 
    
 
