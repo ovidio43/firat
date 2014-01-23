@@ -73,7 +73,7 @@ foreach ($_POST as $key => $value) {
     <div class="full-block">
     <label class="ss-q-title" for="entry_97">Job Description<span class="ss-required-asterisk">*</span></label>
     <label class="ss-q-help" for="entry_97">List the jobs you held, duties performed, skills used or learned, advancements or promotions while you worked at this company.</label>
-    <textarea name="entry97single" rows="8" cols="75" class="ss-q-long" id="entry_97"><?php echo $_SESSION['entry0single']; ?>"</textarea>
+    <textarea name="entry97single" rows="8" cols="75" class="ss-q-long" id="entry_97"><?php echo $_SESSION['entry0single']; ?></textarea>
     </div>
 </div>
 <div class="content_block ">
@@ -106,7 +106,7 @@ foreach ($_POST as $key => $value) {
     <div class="full-block">
     <label class="ss-q-title" for="entry_99">Explain your reason for leaving if you answered &quot;No&quot; to the question above.
         <span class="ss-required-asterisk">*</span></label><label class="ss-q-help" for="entry_99">Answer &quot;NA&quot; if still employed by this company.</label>
-    <textarea name="entry.99.single" rows="8" cols="75" class="ss-q-long" id="entry_99"><?php echo $_SESSION['entry0single']; ?>"</textarea>
+    <textarea name="entry.99.single" rows="8" cols="75" class="ss-q-long" id="entry_99"><?php echo $_SESSION['entry0single']; ?></textarea>
     </div>
 </div>
 <div class="content_block ">
@@ -132,7 +132,7 @@ foreach ($_POST as $key => $value) {
 <div class="content_block ">
     <div class="full-block">
     <label class="ss-q-title" for="entry_181">If you answered &quot;No&quot; to the question above, explain why.
-    </label><textarea name="entry181single" rows="8" cols="75" class="ss-q-long" id="entry_181"><?php echo $_SESSION['entry0single']; ?>"</textarea>
+    </label><textarea name="entry181single" rows="8" cols="75" class="ss-q-long" id="entry_181"><?php echo $_SESSION['entry0single']; ?></textarea>
     </div>
 </div>
     <h2 class="ss-section-title">Employer 2</h2>
@@ -172,7 +172,7 @@ foreach ($_POST as $key => $value) {
     <div class="full-block">
     <label class="ss-q-title" for="entry_110">Job Description</label>
     <label class="ss-q-help" for="entry_110">List the jobs you held, duties performed, skills used or learned, advancements or promotions while you worked at this company.</label>
-    <textarea name="entry110single" rows="8" cols="75" class="ss-q-long" id="entry_110"><?php echo $_SESSION['entry0single']; ?>"</textarea>
+    <textarea name="entry110single" rows="8" cols="75" class="ss-q-long" id="entry_110"><?php echo $_SESSION['entry0single']; ?></textarea>
     </div>
 </div>
 <div class="content_block ">
@@ -200,7 +200,7 @@ foreach ($_POST as $key => $value) {
     <label class="ss-q-title" for="entry_185">Explain your reason for leaving if you answered &quot;No&quot; to the question above.
         <span class="ss-required-asterisk">*</span></label>
     <label class="ss-q-help" for="entry_185">Answer &quot;NA&quot; if still employed by this company.</label>
-    <textarea name="entry185single" rows="8" cols="75" class="ss-q-long" id="entry_185"><?php echo $_SESSION['entry0single']; ?>"</textarea>
+    <textarea name="entry185single" rows="8" cols="75" class="ss-q-long" id="entry_185"><?php echo $_SESSION['entry0single']; ?></textarea>
     </div>
 </div>
 <div class="content_block ">
@@ -227,7 +227,7 @@ foreach ($_POST as $key => $value) {
 <div class="content_block ">
     <div class="full-block">
     <label class="ss-q-title" for="entry_189">If you answered &quot;No&quot; to the question above, explain why.
-    </label><textarea name="entry189single" rows="8" cols="75" class="ss-q-long" id="entry_189"><?php echo $_SESSION['entry0single']; ?>"</textarea>
+    </label><textarea name="entry189single" rows="8" cols="75" class="ss-q-long" id="entry_189"><?php echo $_SESSION['entry0single']; ?></textarea>
     </div>
 </div>
     <h2 class="ss-section-title">Employer 3</h2>
@@ -268,7 +268,7 @@ foreach ($_POST as $key => $value) {
     <div class="full-block">
     <label class="ss-q-title" for="entry_140">Job Description</label>
     <label class="ss-q-help" for="entry_140">List the jobs you held, duties performed, skills used or learned, advancements or promotions while you worked at this company.</label>
-    <textarea name="entry140single" rows="8" cols="75" class="ss-q-long" id="entry_140"><?php echo $_SESSION['entry0single']; ?>"</textarea>
+    <textarea name="entry140single" rows="8" cols="75" class="ss-q-long" id="entry_140"><?php echo $_SESSION['entry0single']; ?></textarea>
     </div>
 </div>
 <div class="content_block ">
@@ -296,7 +296,7 @@ foreach ($_POST as $key => $value) {
     <label class="ss-q-title" for="entry_213">Explain your reason for leaving if you answered &quot;No&quot; to the question above.
         <span class="ss-required-asterisk">*</span></label>
     <label class="ss-q-help" for="entry_213">Answer &quot;NA&quot; if still employed by this company.</label>
-    <textarea name="entry213single" rows="8" cols="75" class="ss-q-long" id="entry_213"><?php echo $_SESSION['entry0single']; ?>"</textarea>
+    <textarea name="entry213single" rows="8" cols="75" class="ss-q-long" id="entry_213"><?php echo $_SESSION['entry0single']; ?></textarea>
     </div>
 </div>
 <div class="content_block ">
@@ -323,7 +323,7 @@ foreach ($_POST as $key => $value) {
 <div class="content_block ">
     <div class="full-block">
     <label class="ss-q-title" for="entry_209">If you answered &quot;No&quot; to the question above, explain why.
-    </label><textarea name="entry209single" rows="8" cols="75" class="ss-q-long" id="entry_209"><?php echo $_SESSION['entry209single']; ?>"</textarea>
+    </label><textarea name="entry209single" rows="8" cols="75" class="ss-q-long" id="entry_209"><?php echo $_SESSION['entry209single']; ?></textarea>
     </div>
 </div>
     <input type="hidden" name="pageNumber" value="3">

@@ -108,7 +108,7 @@
             <label class="ss-q-title" for="entry_177">If yes, explain in concise detail, giving dates and nature of the offense, name and location of the court, and disposition of the case(s).  A conviction may not disqualify you, but a false statement will.
                 <span class="ss-required-asterisk">*</span></label>
             <label class="ss-q-help" for="entry_177">Answer &quot;NA&quot; if you answered &quot;No&quot; to the question above.</label>
-            <textarea name="entry177single" rows="8" cols="75" class="ss-q-long" id="entry_177"><?php echo $_SESSION['entry177single']; ?>"</textarea>
+            <textarea name="entry177single" rows="8" cols="75" class="ss-q-long" id="entry_177"><?php echo $_SESSION['entry177single']; ?></textarea>
         </div>
     </div>
     <div class="content_block ">
@@ -136,7 +136,7 @@
          <div class="full-block">
             <label class="ss-q-title" for="entry_32">Please provide your work availability.<span class="ss-required-asterisk">*</span></label>
             <label class="ss-q-help" for="entry_32">i.e. Mondays, Wednesdays &amp; Fridays (3p-9p) and weekends (9a-5p)</label>
-            <textarea name="entry32single" rows="8" cols="75" class="ss-q-long" id="entry_32"><?php echo $_SESSION['entry32single']; ?>"</textarea>
+            <textarea name="entry32single" rows="8" cols="75" class="ss-q-long" id="entry_32"><?php echo $_SESSION['entry32single']; ?></textarea>
         </div>
     </div>
 

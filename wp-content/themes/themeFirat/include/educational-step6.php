@@ -17,7 +17,7 @@ foreach ($_POST as $key => $value) {
     <div class="ss-page-description ss-no-ignore-whitespace">Firat Educational Solutions, LLC is an equal opportunity employer and surveys all job applicants in accordance with the U.S. Department of Labor&rsquo;s affirmative action requirements. Therefore, Firat Educational Solutions, LLC requests that you complete this optional personal data form. Information will be detached and kept separate from your application of employment. Any information that you choose to provide will be treated as personal and confidential. </div>
 <div class="content_block ">
     <div class="align_left">
-    <label class="ss-q-title" for="entry_233">Gender</label>
+    <label class="ss-q-title" for="entry_233">Gender</label><br>
     <?php
     $selected = Array();
     $selected[0] = 'Male';
@@ -114,7 +114,6 @@ foreach ($_POST as $key => $value) {
 
     <button type="button" id="back-page" >Back</button>
     <input type="submit" name="submit" value="Submit">
-    <div class="password-warning">Never submit passwords through Google Forms.</div>
 </form>
 <form action="" id="formBack" method="post">
     <input type="hidden" name="step" value="5">

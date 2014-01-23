@@ -61,9 +61,11 @@ foreach ($_POST as $key => $value) {
     <label class="ss-q-title" for="entry_171"># of Years Attended<span class="ss-required-asterisk">*</span></label>
     <input type="text" name="entry171single" value="<?php echo $_SESSION['entry171single']; ?>" class="ss-q-short" id="entry_171">
     </div>
-    <div class="align_right ">
+</div>
     <h2 class="ss-section-title">College/University Attended</h2>
-    <div class="ss-section-description ss-no-ignore-whitespace">(If you attended more than one school)</div>
+    <div class="ss-section-description ss-no-ignore-whitespace">(If you attended more than one school)</div>    
+<div class="content_block ">
+    <div class="full-block">
     <label class="ss-q-title" for="entry_54">Name of college or university attended</label>
     <input type="text" name="entry54single" value="<?php echo $_SESSION['entry54single']; ?>" class="ss-q-short" id="entry_54">
     </div>

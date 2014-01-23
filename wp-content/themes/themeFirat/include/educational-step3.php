@@ -33,7 +33,7 @@ foreach ($_POST as $key => $value) {
     <label class="ss-q-title" for="entry_72">Do you have an active or expired (for retired) teaching license or certificate?
     <span class="ss-required-asterisk">*</span></label>
     <label class="ss-q-help" for="entry_72">Please list all licenses and/or certificates &amp; mention if they&#39;re active or expired.  Answer &quot;N/A&quot; if you don&#39;t have any.</label>
-    <textarea name="entry72single" rows="8" cols="75" class="ss-q-long" id="entry_72"><?php echo $_SESSION['entry72single']; ?>"</textarea>
+    <textarea name="entry72single" rows="8" cols="75" class="ss-q-long" id="entry_72"><?php echo $_SESSION['entry72single']; ?></textarea>
     </div>
 </div>    
 <div class="content_block ">
@@ -90,25 +90,25 @@ foreach ($_POST as $key => $value) {
 <div class="content_block ">
     <div class="full-block">
     <label class="ss-q-title" for="entry_162">List other qualifications such as special skills, abilities or honors that should be considered.</label>
-    <textarea name="entry162single" rows="8" cols="75" class="ss-q-long" id="entry_162"><?php echo $_SESSION['entry162single']; ?>"</textarea>
+    <textarea name="entry162single" rows="8" cols="75" class="ss-q-long" id="entry_162"><?php echo $_SESSION['entry162single']; ?></textarea>
     </div>
 </div>    
 <div class="content_block ">
     <div class="full-block">
     <label class="ss-q-title" for="entry_164">List types of computers, software or other technological platforms you can operate.
-    </label><textarea name="entry164single" rows="8" cols="75" class="ss-q-long" id="entry_164"><?php echo $_SESSION['entry164single']; ?>"</textarea>
+    </label><textarea name="entry164single" rows="8" cols="75" class="ss-q-long" id="entry_164"><?php echo $_SESSION['entry164single']; ?></textarea>
     </div>
 </div>    
 <div class="content_block ">
     <div class="full-block">
     <label class="ss-q-title" for="entry_166">Professional licenses, certifications or registrations (if applicable):
-    </label><textarea name="entry166single" rows="8" cols="75" class="ss-q-long" id="entry_166"><?php echo $_SESSION['entry166single']; ?>"</textarea>
+    </label><textarea name="entry166single" rows="8" cols="75" class="ss-q-long" id="entry_166"><?php echo $_SESSION['entry166single']; ?></textarea>
     </div>
 </div>    
 <div class="content_block ">
     <div class="full-block">
     <label class="ss-q-title" for="entry_168">Additional Skills, including other languages or information regarding the career/occupation you wish to bring to the employer&#39;s attention:</label>
-    <textarea name="entry168single" rows="8" cols="75" class="ss-q-long" id="entry_168"><?php echo $_SESSION['entry168single']; ?>"</textarea>
+    <textarea name="entry168single" rows="8" cols="75" class="ss-q-long" id="entry_168"><?php echo $_SESSION['entry168single']; ?></textarea>
     </div>
 </div>
 
