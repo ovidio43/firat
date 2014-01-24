@@ -65,7 +65,9 @@ if (get_field('enabled_twitter_box')) {
                         <?php } else if ($step == 5) { ?>
                             <div id="step-3"><?php require_once(get_template_directory() . '/include/educational-step5.php'); ?></div>
                         <?php } else if ($step == 6) { ?>
-                            <div id="step-3"><?php require_once(get_template_directory() . '/include/educational-step6.php'); ?></div>
+                            <div id="step-3"><?php require_once(get_template_directory() . '/include/educational-step6.php'); ?></div>                        
+                        <?php } else if ($step == 7) { ?>
+                            <div id="step-3"><?php require_once(get_template_directory() . '/include/educational-step7.php'); ?></div>
                         <?php } ?>
                     </div>
                 </div>

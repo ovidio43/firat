@@ -27,7 +27,8 @@ foreach ($_POST as $key => $value) {
     <h2 class="ss-section-title">College/University Attended</h2>
 <div class="content_block ">
     <div class="align_left ">
-    <label class="ss-q-title" for="entry_36">Name of college or university attended<span class="ss-required-asterisk">*</span></label><input type="text" name="entry36single" value="<?php echo $_SESSION['entry36single']; ?>" class="ss-q-short" id="entry_36">
+    <label class="ss-q-title" for="entry_36">Name of college or university attended<span class="ss-required-asterisk">*</span></label>
+    <input type="text" name="entry36single" value="<?php echo $_SESSION['entry36single']; ?>" class="ss-q-short" id="entry_36">
     </div>
     <div class="align_right ">
     <label class="ss-q-title" for="entry_42">Degree type<span class="ss-required-asterisk">*</span></label>
@@ -103,8 +104,6 @@ foreach ($_POST as $key => $value) {
     </div>
 </div>
     <input type="hidden" name="step" value="3">
-    <input type="hidden" name="backupCache" value="valuesavecachehere">
-    <!--<input type="submit" name="back" value="&laquo; Back">-->
     <button type="button" id="back-page" >Back</button>
     <input type="submit" name="continue" value="Continue &raquo;">
 </form>

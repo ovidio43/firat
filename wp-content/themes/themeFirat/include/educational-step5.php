@@ -31,7 +31,6 @@ foreach ($_POST as $key => $value) {
     </div>
 </div>
 <input type="hidden" name="step" value="6">
-<input type="hidden" name="backupCache" value="">
 <button type="button" id="back-page" >Back</button>
 <input type="submit" name="continue" value="Continue &raquo;">
 </form>

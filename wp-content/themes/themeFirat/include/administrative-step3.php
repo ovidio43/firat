@@ -48,10 +48,7 @@ foreach ($_POST as $key => $value) {
     <textarea name="entry168single" rows="8" cols="75" class="ss-q-long" id="entry_168"><?php echo $_SESSION['entry168single']; ?></textarea>
     </div>
 </div>
-    <input type="hidden" name="step" value="4">
-    <input type="hidden" name="backupCache" value="">
-
-    <!--<input type="submit" name="back" value="&laquo; Back">-->
+    <input type="hidden" name="step" value="4">       
     <button type="button" id="back-page" >Back</button>
     <input type="submit" name="continue" value="Continue &raquo;">
 </form>

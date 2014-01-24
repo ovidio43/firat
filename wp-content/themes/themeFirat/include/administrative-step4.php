@@ -146,7 +146,8 @@ foreach ($_POST as $key => $value) {
 </div>
 <div class="content_block ">
     <div class="align_left">
-    <label class="ss-q-title" for="entry_219">Dates Employed</label><label class="ss-q-help" for="entry_219">(Month/Year) to (Month/Year)</label><input type="text" name="entry219single" value="<?php echo $_SESSION['entry219single']; ?>" class="ss-q-short" id="entry_219">
+    <label class="ss-q-title" for="entry_219">Dates Employed</label><label class="ss-q-help" for="entry_219">(Month/Year) to (Month/Year)</label>
+    <input type="text" name="entry219single" value="<?php echo $_SESSION['entry219single']; ?>" class="ss-q-short" id="entry_219">
     </div>
     <div class="align_right ">
     <label class="ss-q-title" for="entry_104">Name of Supervisor</label>
@@ -313,9 +314,7 @@ foreach ($_POST as $key => $value) {
     </label><textarea name="entry197single" rows="8" cols="75" class="ss-q-long" id="entry_197"><?php echo $_SESSION['entry197single']; ?></textarea>
     </div>
 </div>
-    <input type="hidden" name="step" value="5">
-    <input type="hidden" name="backupCache" value="">
-
+    <input type="hidden" name="step" value="5">   
     <button type="button" id="back-page" >Back</button>
     <input type="submit" name="continue" value="Continue &raquo;">
 </form>

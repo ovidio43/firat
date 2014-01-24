@@ -114,8 +114,7 @@ foreach ($_POST as $key => $value) {
     <input type="text" name="entry173single" value="<?php echo $_SESSION['entry173single']; ?>" class="ss-q-short" id="entry_173">
     </div>
 </div>
-    <input type="hidden" name="step" value="3">
-    <input type="hidden" name="backupCache" >
+    <input type="hidden" name="step" value="3">    
     <button type="button" id="back-page" >Back</button>
     <input type="submit" name="continue" value="Continue &raquo;">
 </form>

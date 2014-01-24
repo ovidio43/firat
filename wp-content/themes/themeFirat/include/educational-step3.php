@@ -8,11 +8,11 @@ foreach ($_POST as $key => $value) {
         jQuery('#ss-form3').validate({
             rules: {
                 entry72single: {required: true},
-                entry162single: {required: true},
-                entry74single: {required: true},
-                entry164single: {required: true},
-                entry166single: {required: true},
-                entry168single: {required: true}
+//                entry162single: {required: true},
+                entry74single: {required: true}
+//                entry164single: {required: true},
+//                entry166single: {required: true},
+//                entry168single: {required: true}
             }
         });
 
@@ -110,9 +110,7 @@ foreach ($_POST as $key => $value) {
     <label class="ss-q-title" for="entry_168">Additional Skills, including other languages or information regarding the career/occupation you wish to bring to the employer&#39;s attention:</label>
     <textarea name="entry168single" rows="8" cols="75" class="ss-q-long" id="entry_168"><?php echo $_SESSION['entry168single']; ?></textarea>
     </div>
-</div>
-
-    <input type="hidden" name="backupCache" value="">
+</div>    
     <input type="hidden" name="step" value="4">
     <button type="button" id="back-page" >Back</button>
     <input type="submit" name="continue" value="Continue &raquo;">
