@@ -8,7 +8,7 @@ foreach ($_POST as $key => $value) {
 
 //$destinatario = "jorge.quispe@altra.com.bo";
 $destinatario = "droman@innervel.com";
-$asunto = "asunto:Join Our Educational Team";
+$asunto = "Join Our Educational Team";
 
 $nameAttr = Array(
     'entry0single' => 'First name',
@@ -109,9 +109,9 @@ foreach ($_SESSION as $key => $value) {
 }
 $headers = "MIME-Version: 1.0\r\n";
 
-$headers .= "From: Join Our Educational Team <noreply@mommyhotspot.com>\r\n";
+$headers .= "From: Join Our Educational Team <noreply@firateducation.com>\r\n";
 if (mail($destinatario, $asunto, $cuerpo, $headers)) {
-    echo '<h1>Gracias por Registrarse..</h1>';
+    echo '<h1>Your response has been recorded.</h1>';
     session_destroy();
 } else {
     ?>
