@@ -5,7 +5,7 @@ foreach ($_POST as $key => $value) {
     $_SESSION[$key] = $value;
 }
 //$destinatario = "jorge.quispe@altra.com.bo";
-$destinatario = "droman@innervel.com";
+$destinatario = "josephine@firateducation.com";
 $asunto = "Join our Administrative Team";
 
 $nameAttr = Array(

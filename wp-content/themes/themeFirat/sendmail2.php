@@ -33,7 +33,7 @@ $body .="<b>How did you hear about us? </b>".$_POST["about_us"]." ".$_POST["abou
 
 if (!empty($_POST["first_name"]) && !empty($_POST["last_name"]) && !empty($_POST["email"]) && !empty($_POST["phone_number"])&& !empty($_POST["__city_state"])) {
 //        if (filter_var($email, FILTER_VALIDATE_EMAIL) && filter_var($paypal, FILTER_VALIDATE_EMAIL)) {
-    $from = "josephine@firateducation.com, droman@innervel.com";
+    $from = "josephine@firateducation.com";
     $subject = "Register for your FES Educational Assessment and Roadmap today";
     $body = $body;
     $headers = "MIME-Version: 1.0" . "\r\n";

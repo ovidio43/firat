@@ -25,7 +25,7 @@ $body .="<b>Is there any other information you would like to tell us that can he
 
 if (!empty($_POST["student_Name"]) && !empty($_POST["parent_Name"]) && !empty($_POST["parent_email_address"]) && !empty($_POST["Address"])&& !empty($_POST["City_State"])) {
 //        if (filter_var($email, FILTER_VALIDATE_EMAIL) && filter_var($paypal, FILTER_VALIDATE_EMAIL)) {
-    $from = "droman@innervel.com";
+    $from = "josephine@firateducation.com";
     $subject = "Register 2nd Saturday Form";
     $body = $body;
     $headers = "MIME-Version: 1.0" . "\r\n";

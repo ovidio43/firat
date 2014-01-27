@@ -7,7 +7,7 @@ foreach ($_POST as $key => $value) {
 
 
 //$destinatario = "jorge.quispe@altra.com.bo";
-$destinatario = "droman@innervel.com";
+$destinatario = "josephine@firateducation.com";
 $asunto = "Join Our Educational Team";
 
 $nameAttr = Array(
