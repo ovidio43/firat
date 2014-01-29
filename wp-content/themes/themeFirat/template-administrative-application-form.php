@@ -50,7 +50,11 @@ if (get_field('enabled_twitter_box')) {
                 <?php getShare(); ?>                
             </div>            
             <div class="entry-content">
-                <?php the_content(); ?>
+                <?php 
+                if ($step == 1 || $step == "") {
+                    the_content(); 
+                }
+                ?>
                 <div class="wrapform content-form backgroud_form">
                     <div class="wrap_date">
                         <?php if ($step == 1 || $step == "") { ?>
