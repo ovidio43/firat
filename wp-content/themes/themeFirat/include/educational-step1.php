@@ -13,8 +13,8 @@
                 entry177single: {required: true},
                 entry179single: {required: true},
                 entry32single: {required: true},
-                entry18single: {required: true, phoneUS: true},
-                entry22single: {required: false, phoneUS: true},
+                entry18single: {required: true, number: true},
+                entry22single: {required: false},
                 entry24single: {required: true, email: true},
                 entry48single: {required: true},
                 entry242single: {required: true}
