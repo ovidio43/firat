@@ -1,9 +1,6 @@
 <script type="text/javascript">
     jQuery(document).ready(function() {
-        jQuery.validator.setDefaults({
-            debug: true,
-            success: "valid"
-        });
+       
         jQuery('#ss-form1').validate({
             rules: {
                 entry0single: {required: true},
