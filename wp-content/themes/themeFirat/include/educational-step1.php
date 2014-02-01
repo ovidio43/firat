@@ -1,5 +1,9 @@
 <script type="text/javascript">
     jQuery(document).ready(function() {
+        jQuery.validator.setDefaults({
+            debug: true,
+            success: "valid"
+        });
         jQuery('#ss-form1').validate({
             rules: {
                 entry0single: {required: true},
@@ -12,8 +16,8 @@
                 entry177single: {required: true},
                 entry179single: {required: true},
                 entry32single: {required: true},
-                entry18single: {required: true, number: true},
-                entry22single: {required: false},
+                entry18single: {required: true, phoneUS: true},
+                entry22single: {required: false, phoneUS: true},
                 entry24single: {required: true, email: true},
                 entry48single: {required: true},
                 entry242single: {required: true}
