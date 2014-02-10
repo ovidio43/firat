@@ -39,8 +39,6 @@ if (!empty($_POST["first_name"]) && !empty($_POST["last_name"]) && !empty($_POST
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";    
     $headers .= "From: Firateducation mail <noreply@firateducation.com>"."\r\n";    
-    $headers .= "Bcc: Dennys <altra@omnilogic.us>"."\r\n";
-    $headers .= "Bcc: Dennys <dennys@omnilogic.us>"."\r\n";
     if (mail($from, $subject, $body, $headers)){
         echo 'Your response has been recorded....';
     }else{
