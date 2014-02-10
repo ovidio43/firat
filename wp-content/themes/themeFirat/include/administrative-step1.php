@@ -1,5 +1,10 @@
 <script type="text/javascript">
     jQuery(document).ready(function() {
+        jQuery.validator.addMethod("phoneUS", function(phone_number, element) {
+            phone_number = phone_number.replace(/\s+/g, "");
+            return this.optional(element) || phone_number.length > 9 &&
+                phone_number.match(/^(\+?1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/);
+        }, "Please specify a valid phone number"); 
         jQuery('#ss-form1').validate({
             rules: {
                 entry0single: {required: true},
@@ -12,7 +17,8 @@
                 entry177single: {required: true},
                 entry179single: {required: true},
                 entry32single: {required: true},
-                entry18single: {required: true, number: true},
+                entry18single: {required: true, phoneUS: true},
+                entry22single: {required: false},
                 entry24single: {required: true, email: true},
                 entry48single: {required: true},
                 entry242single: {required: true}

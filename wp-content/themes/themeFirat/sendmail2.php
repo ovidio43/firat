@@ -38,9 +38,11 @@ if (!empty($_POST["first_name"]) && !empty($_POST["last_name"]) && !empty($_POST
     $body = $body;
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";    
-    $headers .= "From: egister for your FES Educational Assessment <noreply@firateducation.com>\r\n";
+    $headers .= "From: Firateducation mail <noreply@firateducation.com>"."\r\n";    
+    $headers .= "Bcc: Dennys <dennys@omnilogic.us>"."\r\n";
+    $headers .= "Bcc: Eddy <omnilogic_support@altra.com.bo>"."\r\n";  
     if (mail($from, $subject, $body, $headers)){
-        echo 'Your response has been recorded.';
+        echo 'Your response has been recorded....';
     }else{
         echo "Error. Please try again.";
     }
