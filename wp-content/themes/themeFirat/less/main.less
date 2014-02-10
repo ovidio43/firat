@@ -51,6 +51,7 @@ body {
 a, a:visited, a:hover {
     color: #0D72C7;
 }
+a, object, input, a:active, a:focus, input:active, input:focus {outline:none}
 hr {
     display: block;
     height: 1px;
@@ -753,12 +754,9 @@ padding: 10px ;
 }
 @media (max-width: 600px) {
     .video-container{ 
-        position: relative;
-
+        float: left;
     } 
     .entry-content iframe, .entry-content object, .entry-content  embed { 
-        top: 0; 
-        left: 0; 
         width: 100%!important; 
         height: 300px!important; 
         z-index: 100;
