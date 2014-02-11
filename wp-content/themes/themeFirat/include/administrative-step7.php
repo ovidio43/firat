@@ -1,12 +1,26 @@
 <?php
 
 //session_start();
+require $_SERVER['DOCUMENT_ROOT'].'/fes2/wp-content/themes/themeFirat/PHPMailer-master/PHPMailerAutoload.php';
+$mail = new PHPMailer();
+$mail->isSMTP();
+$mail->Host = 'smtp.1and1.com';
+$mail->SMTPAuth = true;
+$mail->Port = 25;
+$mail->Username = 'noreply@firateducation.com';
+$mail->Password = 'noreplyfes';
+
+$mail->setFrom('noreply@firateducation.com', 'Join our Administrative Team');
+$mail->addReplyTo('noreply@firateducation.com', 'Firateducation mail');
+$mail->addAddress('josephine@firateducation.com', 'Firateducational');
+$mail->addAddress('JLGough@gmail.com', 'JL');
+$mail->addAddress('altra@omnilogic.us', 'Eddy');
+
+$mail->Subject = 'Join our Administrative Team';
 foreach ($_POST as $key => $value) {
     $_SESSION[$key] = $value;
 }
-//$destinatario = "jorge.quispe@altra.com.bo";
-$destinatario = "josephine@firateducation.com";
-$asunto = "Join our Administrative Team";
+
 
 $nameAttr = Array(
     'entry0single' => 'First name',
@@ -106,27 +120,25 @@ foreach ($_SESSION as $key => $value) {
         }
     
 }
-$headers = "MIME-Version: 1.0\r\n";
-
-$headers .= "From: Join our Administrative Team <noreply@firateducation.com>\r\n";     
-if (mail($destinatario, $asunto, $cuerpo, $headers)) {
-    echo '<h1>Your response has been recorded.</h1>';
-    session_destroy();
-} else {
-    ?>
-    <script type="text/javascript">
-        jQuery(document).ready(function() {
-            jQuery('#back-page').on('click', function() {
-                jQuery('#formBack').submit();
+$mail->msgHTML($cuerpo);
+    if (!$mail->send()) {
+        ?>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                jQuery('#back-page').on('click', function() {
+                    jQuery('#formBack').submit();
+                });
             });
-        });
 
-    </script>
-    <button type="button" id="back-page" >Back</button>
-    <form action="" id="formBack" method="post">
-        <input type="hidden" name="step" value="6">
-    </form>
-    <?php
+        </script>
+        <button type="button" id="back-page" >Back</button>
+        <form action="" id="formBack" method="post">
+            <input type="hidden" name="step" value="6">
+        </form>
+        <?php
+    } else {
+        echo "<h1>Your response has been recorded.</h1>";
+        session_destroy();
+    }
 
-}
 

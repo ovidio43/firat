@@ -1,5 +1,22 @@
 <?php
 //var_dump($_POST);
+require $_SERVER['DOCUMENT_ROOT'].'/fes2/wp-content/themes/themeFirat/PHPMailer-master/PHPMailerAutoload.php';
+$mail = new PHPMailer();
+$mail->isSMTP();
+$mail->Host = 'smtp.1and1.com';
+$mail->SMTPAuth = true;
+$mail->Port = 25;
+$mail->Username = 'noreply@firateducation.com';
+$mail->Password = 'noreplyfes';
+
+$mail->setFrom('noreply@firateducation.com', 'FES Educational Assessment');
+$mail->addReplyTo('noreply@firateducation.com', 'Firateducation mail');
+$mail->addAddress('josephine@firateducation.com', 'Firateducational');
+$mail->addAddress('JLGough@gmail.com', 'JL');
+$mail->addAddress('altra@omnilogic.us', 'Eddy');
+
+$mail->Subject = 'Register for your FES Educational Assessment and Roadmap today';
+
 $body ="<b>First Name: </b>".$_POST["first_name"]."<br>";
 $body .="<b>Last Name </b>".$_POST["last_name"]."<br>";
 $body .="<b>Email </b>".$_POST["email"]."<br>";
@@ -30,19 +47,13 @@ foreach($_POST['fes_service'] as $fes_service){
 }
 $body .="<b>Which FES service are you interested in? </b>".$fes_service_aux."<br>";
 $body .="<b>How did you hear about us? </b>".$_POST["about_us"]." ".$_POST["about_us_other"]."<br>";
-
+$mail->msgHTML($body);
 if (!empty($_POST["first_name"]) && !empty($_POST["last_name"]) && !empty($_POST["email"]) && !empty($_POST["phone_number"])&& !empty($_POST["__city_state"])) {
 //        if (filter_var($email, FILTER_VALIDATE_EMAIL) && filter_var($paypal, FILTER_VALIDATE_EMAIL)) {
-    $from = "josephine@firateducation.com";
-    $subject = "Register for your FES Educational Assessment and Roadmap today";
-    $body = $body;
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";    
-    $headers .= "From: Firateducation mail <noreply@firateducation.com>"."\r\n";    
-    if (mail($from, $subject, $body, $headers)){
-        echo 'Your response has been recorded....';
-    }else{
-        echo "Error. Please try again.";
+    if (!$mail->send()) {
+        echo "Error. Please try again. " . $mail->ErrorInfo;
+    } else {
+        echo "Your response has been recorded";
     }
            
 } else {

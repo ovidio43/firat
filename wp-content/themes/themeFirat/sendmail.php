@@ -9,7 +9,7 @@ $mail->Port = 25;
 $mail->Username = 'noreply@firateducation.com';
 $mail->Password = 'noreplyfes';
 
-$mail->setFrom('noreply@firateducation.com', 'Firateducational');
+$mail->setFrom('noreply@firateducation.com', 'Register 2nd Saturday');
 $mail->addReplyTo('noreply@firateducation.com', 'Firateducation mail');
 $mail->addAddress('josephine@firateducation.com', 'Firateducational');
 $mail->addAddress('JLGough@gmail.com', 'JL');
