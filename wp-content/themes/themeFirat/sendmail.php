@@ -1,5 +1,21 @@
 <?php
 
+require $_SERVER['DOCUMENT_ROOT'].'/fes2/wp-content/themes/themeFirat/PHPMailer-master/PHPMailerAutoload.php';
+$mail = new PHPMailer();
+$mail->isSMTP();
+$mail->Host = 'smtp.1and1.com';
+$mail->SMTPAuth = true;
+$mail->Port = 25;
+$mail->Username = 'noreply@firateducation.com';
+$mail->Password = 'noreplyfes';
+
+$mail->setFrom('noreply@firateducation.com', 'Firateducational');
+$mail->addReplyTo('noreply@firateducation.com', 'Firateducation mail');
+$mail->addAddress('josephine@firateducation.com', 'Firateducational');
+$mail->addAddress('JLGough@gmail.com', 'JL');
+$mail->addAddress('altra@omnilogic.us', 'Eddy');
+
+$mail->Subject = 'Register 2nd Saturday Form';
 
 $body ="<b>Student Name: </b>".$_POST["student_Name"]."<br>";
 $body .="<b>Parent Name: </b>".$_POST["parent_Name"]."<br>";
@@ -22,22 +38,27 @@ $body .="<b>tell us if you have already taken the SAT or ACT tests: </b>".$_POST
 $body .="<b>tell us how you have prepared: </b>".$_POST["question_thrre"]."<br>";
 $body .="<b>Do you currently have a test preparation book that you use to prepare? </b>".$_POST["question_for"]."<br>";
 $body .="<b>Is there any other information you would like to tell us that can help us analyze your practice test? </b>".$_POST["question_five"];
+$mail->msgHTML($body);
 
 if (!empty($_POST["student_Name"]) && !empty($_POST["parent_Name"]) && !empty($_POST["parent_email_address"]) && !empty($_POST["Address"])&& !empty($_POST["City_State"])) {
 //        if (filter_var($email, FILTER_VALIDATE_EMAIL) && filter_var($paypal, FILTER_VALIDATE_EMAIL)) {
-    $from = "josephine@firateducation.com";
-    $subject = "Register 2nd Saturday Form";
-    $body = $body;
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n"; 
-    $headers .= "From: Firateducation mail <noreply@firateducation.com>"."\r\n";    
+   // $from = "josephine@firateducation.com";
+   // $subject = "Register 2nd Saturday Form";
+    //$body = $body;
+    //$headers = "MIME-Version: 1.0" . "\r\n";
+   // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n"; 
+    //$headers .= "From: Firateducation mail <noreply@firateducation.com>"."\r\n";    
 
-    if (mail($from, $subject, $body, $headers)){
+   /* if (mail($from, $subject, $body, $headers)){
         echo 'Your response has been recorded....';
     }else{
         echo "Error. Please try again.";
+    }*/
+    if (!$mail->send()) {
+        echo "Error. Please try again. " . $mail->ErrorInfo;
+    } else {
+        echo "Your response has been recorded";
     }
-           
 } else {
     echo 'Looks like you have a question or two that still needs to be filled out.';
 }
