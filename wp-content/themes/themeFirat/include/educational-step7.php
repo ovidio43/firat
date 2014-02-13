@@ -108,12 +108,12 @@ foreach ($_SESSION as $key => $value) {
 
             $cuerpo.="<b>" . $nameAttr[$key] . " :</b> ";
             foreach ($value as $val) {
-                $cuerpo.= $val . " \r\n";
+                $cuerpo.= $val . " <br>";
             }
         } else {
 
             $cuerpo.="<b>" . $nameAttr[$key] . " :</b> ";
-            $cuerpo.= $value . " \r\n";
+            $cuerpo.= $value . " <br>";
         }
     
 }
