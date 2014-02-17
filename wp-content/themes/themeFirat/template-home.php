@@ -4,7 +4,6 @@
 *
 */
 get_header();?>
-
     <?php
      if( get_field('enabled_twitter_box') )
     {     
