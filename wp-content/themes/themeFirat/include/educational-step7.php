@@ -105,15 +105,19 @@ $cuerpo = '';
 foreach ($_SESSION as $key => $value) {
    
         if (is_array($value)) {
-
-            $cuerpo.="<b>" . $nameAttr[$key] . " :</b> ";
-            foreach ($value as $val) {
-                $cuerpo.= $val . " \r\n";
+            if($nameAttr[$key]){
+                $cuerpo.="<b>" . $nameAttr[$key] . " :</b> ";
+                foreach ($value as $val) {
+                    $cuerpo.= $val . " <br>";
+                }                
             }
-        } else {
 
-            $cuerpo.="<b>" . $nameAttr[$key] . " :</b> ";
-            $cuerpo.= $value . " \r\n";
+        } else {
+            if($nameAttr[$key]){
+                $cuerpo.="<b>" . $nameAttr[$key] . " :</b> ";
+                $cuerpo.= $value . " <br>";                
+            }
+
         }
     
 }
