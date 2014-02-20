@@ -55,7 +55,7 @@ if (get_field('enabled_twitter_box')) {
                     the_content(); 
                 }
                 ?>
-                <div class="wrapform content-form backgroud_form">
+                <!--div class="wrapform content-form backgroud_form">
                     <div class="wrap_date">
                         <?php if ($step == 1 || $step == "") { ?>
                             <div id="step-1"><?php require_once(get_template_directory() . '/include/administrative-step1.php'); ?></div>
@@ -73,7 +73,7 @@ if (get_field('enabled_twitter_box')) {
                             <div id="step-3"><?php require_once(get_template_directory() . '/include/administrative-step7.php'); ?></div>
                         <?php } ?>
                     </div>
-                </div>
+                </div-->
 
             </div>
         <?php endwhile; // end of the loop. ?> 

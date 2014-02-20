@@ -50,11 +50,11 @@ $step = $_GET['step'];
             </div>            
         	<div class="entry-content">
 				<?php the_content();?>
-                <div class="wrapform content-form backgroud_form">
+                <!--div class="wrapform content-form backgroud_form">
 						<div class="wrap_date">
 								<?php require_once(get_template_directory() . '/include/2nd_saturday_form.php');?>
 						</div>
-                </div>
+                </div-->
  
         	</div>
         <?php endwhile; // end of the loop. ?> 
